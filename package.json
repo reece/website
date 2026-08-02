@@ -14,9 +14,6 @@
     "@nuxtjs/color-mode": "^4.0.1",
     "nuxt": "^4"
   },
-  "pnpm": {
-    "onlyBuiltDependencies": ["better-sqlite3", "esbuild", "@parcel/watcher"]
-  },
   "devDependencies": {
     "@iconify-json/ph": "^1.2.2",
     "@unocss/nuxt": "latest",
