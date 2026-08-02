@@ -11,9 +11,11 @@
   },
   "dependencies": {
     "@nuxt/content": "^3",
+    "@nuxtjs/color-mode": "^4.0.1",
     "nuxt": "^4"
   },
   "devDependencies": {
+    "@iconify-json/ph": "^1.2.2",
     "@unocss/nuxt": "latest",
     "@unocss/reset": "latest",
     "better-sqlite3": "latest",

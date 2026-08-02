@@ -5,7 +5,12 @@ export default defineNuxtConfig({
   modules: [
     '@nuxt/content',
     '@unocss/nuxt',
+    '@nuxtjs/color-mode',
   ],
+
+  colorMode: {
+    classSuffix: '',
+  },
 
   // Static generation for GitHub Pages
   nitro: {
