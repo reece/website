@@ -71,6 +71,20 @@ Build order (style guide first, so every component has a live reference before i
 - `AppNav.vue`: drop the plain border-bottom, replace with a `BrushStroke` accent; active/hover link states use `MarkerUnderline` instead of color-only change.
 - `default.vue`: same treatment for the footer border; dark-mode classes (`dark:bg-neutral-950` etc.) stay as-is — the new palette is additive for light mode only.
 
+## Responsive / mobile
+
+Mobile is a first-class target, not a reflow afterthought — every component and page layout is designed mobile-first and checked at a narrow viewport as it's built, not patched in after.
+
+- **`BrushStroke`**: SVG `viewBox` scales fluidly by nature (width 100%, height fixed or `vh`-capped); verify the turbulence/displacement distortion still reads as a brush texture at narrow widths rather than smearing into mush. Reduce band height on small screens (e.g. `h-16` mobile → `h-24` desktop) rather than keeping a fixed px height.
+- **`AppNav`**: current desktop nav (logo left, links + dark-mode toggle right) collapses to a mobile pattern — hamburger/slide-out or a simple wrapped/stacked link row, whichever reads cleaner once built; decide by looking at it live rather than guessing now.
+- **Home**: hero text and brush band stack fine by default (single column); recent-thoughts list already stacks vertically.
+- **About**: the 3-column "What I do" (build / understand / collaborate) becomes a single column on mobile; the Venn-style `SketchPlaceholder` scales down or stacks above/below body text rather than sitting inline beside it.
+- **Writing / blog index**: tag-pill filter row becomes horizontally scrollable (not wrapped into a multi-row block) on narrow screens, to avoid pushing post list content down.
+- **Blog post**: the "On this page" TOC sidebar (desktop: fixed left column) drops below the article or becomes a collapsible/disclosure block on mobile — it does not squeeze into a narrow side column.
+- **Visual-language page**: swatch/component grids reflow to fewer columns (1–2) on mobile; this page is a reference tool, so correctness matters more than density here.
+
+Verification: check every shipped page at a mobile viewport width (e.g. 375px) as it's built, not just at the end.
+
 ## Testing / verification
 
 - No dark mode regression: spot-check dark mode still renders (unchanged classes) after the light-theme rework.
