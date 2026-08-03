@@ -12,17 +12,66 @@
 
       <section>
         <h2 class="font-display text-xl font-semibold mb-4">Color palette</h2>
-        <div class="space-y-6">
-          <ContrastBackdrop v-for="tier in tiers" :key="tier.name" :swatch-size="56" :swatch-size-sm="80"
-            class="w-full">
-            <div class="flex gap-2 sm:gap-4 justify-center">
-              <RoughSwatch v-for="(swatch, index) in tier.swatches" :key="swatch.name" :fill="swatch.value"
-                :text-color="swatch.textOn" :seed="index" class="w-14 h-14 sm:w-20 sm:h-20 shrink-0">
-                <span class="text-[10px] sm:text-xs">{{ swatch.name }}</span>
-                <span class="text-[8px] sm:text-[10px] opacity-80">{{ swatch.hex }}</span>
-              </RoughSwatch>
-            </div>
-          </ContrastBackdrop>
+
+        <table class="w-full mt-8 text-sm border-collapse">
+          <thead>
+            <tr class="border-b border-border">
+              <th class="text-left font-medium py-2 pr-4">Swatch</th>
+              <th class="text-left font-medium py-2 pr-4">Token</th>
+              <th class="text-left font-medium py-2 pr-4">Color</th>
+              <th class="text-left font-medium py-2">Uses</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr v-for="color in colors" :key="color.name" class="border-b border-border">
+              <td class="py-3 pr-4">
+                <RoughSwatch :fill="color.value" :text-color="color.textOn" :seed="color.seed"
+                  class="w-28 h-7 sm:w-40 sm:h-10" />
+              </td>
+              <td class="py-3 pr-4 align-middle">
+                <span v-if="color.roles.length === 0" class="opacity-50 italic">unassigned</span>
+                <code v-else class="text-xs">{{ color.roles.join(', ') }}</code>
+              </td>
+              <td class="py-3 pr-4 align-middle opacity-80 whitespace-nowrap">
+                <div>{{ color.name }}</div>
+                <div class="text-xs">{{ color.hex }}</div>
+                <div class="text-xs">{{ color.oklch }}</div>
+              </td>
+              <td class="py-3 align-middle opacity-80">{{ color.uses }}</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <div class="mt-8 space-y-4">
+          <div class="bg-background border border-border rounded p-4">
+            <p class="text-xs uppercase tracking-wide opacity-60 mb-2">
+              <code>bg-background</code> + <code>border-border</code>
+            </p>
+            <p class="text-foreground">
+              A card using <code>bg-background</code> for its fill, <code>border-border</code> for its edge, and
+              <code>text-foreground</code> (below) for body copy.
+            </p>
+          </div>
+
+          <p>
+            <code>text-headings</code> for a heading:
+            <span class="block font-display text-xl font-semibold text-headings">A Sample Heading</span>
+          </p>
+
+          <p class="text-foreground">
+            <code>text-primary</code> / <code>text-accent</code> for a
+            <a href="#" class="text-accent hover:opacity-75 transition-opacity">link like this one</a>.
+          </p>
+
+          <p class="text-foreground">
+            <code>text-secondary</code> for de-emphasized supporting text, such as a
+            <span class="text-secondary">figure caption</span> or metadata line.
+          </p>
+
+          <p class="text-foreground">
+            <code>text-highlight</code> reserved for a
+            <span class="text-highlight font-medium">standout callout</span> when something needs real visual pop.
+          </p>
         </div>
       </section>
 
@@ -110,5 +159,16 @@ const tiers = [
       { name: 'rust', value: 'var(--rust)', textOn: 'var(--paper)', hex: '#BC5324' },
     ],
   },
+]
+
+const colors = [
+  { name: 'white', value: '#FFFFFF', textOn: 'var(--ink)', seed: 0, roles: [], uses: 'Unassigned.', hex: '#FFFFFF', oklch: 'oklch(100.0% 0 0)' },
+  { name: 'paper', value: 'var(--paper)', textOn: 'var(--ink)', seed: 1, roles: ['background'], uses: 'Page and section background.', hex: '#FAF8F5', oklch: 'oklch(98.0% 0.0045 78.3)' },
+  { name: 'linen', value: 'var(--linen)', textOn: 'var(--ink)', seed: 2, roles: [], uses: 'Unassigned.', hex: '#EFEAE1', oklch: 'oklch(93.8% 0.0132 82.4)' },
+  { name: 'sand', value: 'var(--sand)', textOn: 'var(--ink)', seed: 3, roles: ['border'], uses: 'Dividers and box borders (e.g. mobile TOC, contrast backdrop).', hex: '#E5E1D6', oklch: 'oklch(91.0% 0.0154 90.2)' },
+  { name: 'ink', value: 'var(--ink)', textOn: 'var(--paper)', seed: 4, roles: ['foreground'], uses: 'Primary body text.', hex: '#52504A', oklch: 'oklch(43.1% 0.0100 91.6)' },
+  { name: 'slate', value: 'var(--slate)', textOn: 'var(--paper)', seed: 5, roles: ['primary', 'headings', 'accent'], uses: 'Links, hover states, active nav/tag — the main interactive color.', hex: '#365C7A', oklch: 'oklch(46.0% 0.0656 243.7)' },
+  { name: 'forest', value: 'var(--forest)', textOn: 'var(--paper)', seed: 6, roles: ['secondary', 'subheadings'], uses: 'Reserved for a secondary accent (not yet used).', hex: '#6A7C6E', oklch: 'oklch(56.7% 0.0301 152.0)' },
+  { name: 'rust', value: 'var(--rust)', textOn: 'var(--paper)', seed: 7, roles: ['highlight'], uses: 'Reserved for visual emphasis/pop (not yet used).', hex: '#BC5324', oklch: 'oklch(56.9% 0.1479 42.3)' },
 ]
 </script>
