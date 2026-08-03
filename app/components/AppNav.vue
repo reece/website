@@ -1,5 +1,6 @@
 <template>
   <header class="bg-paper">
+    <HeaderBrush />
     <nav class="max-w-3xl mx-auto w-full px-6 py-4 flex items-center justify-between">
       <NuxtLink to="/" class="font-display text-lg font-semibold tracking-tight text-ink hover:text-slate transition-colors">
         Reece Hart
@@ -29,7 +30,6 @@
         </button>
       </div>
     </nav>
-    <BrushStroke />
   </header>
 </template>
 
