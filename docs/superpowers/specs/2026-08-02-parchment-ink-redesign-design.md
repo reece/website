@@ -2,6 +2,8 @@
 
 Full visual redesign of reecehart.com, replacing the current generic Tailwind/neutral-gray theme with a custom "flow and ease" aesthetic: parchment background, hand-drawn ink accents, painted brush-stroke bands, and an architect-style serif for headings.
 
+**Reference mockup:** [../plans/2026-08-02-parchment-ink-redesign-mockup.png](../plans/2026-08-02-parchment-ink-redesign-mockup.png) — the original hand-sketched design driving every decision below.
+
 ## Goals
 
 - Replace the generic starter look with a distinctive design system driven by a hand-sketched mockup (paint-stroke header/footer bands, hand-drawn dividers, architect's-type headings, soft parchment/slate/forest palette).

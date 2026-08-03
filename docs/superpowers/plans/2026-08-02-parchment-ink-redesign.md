@@ -8,6 +8,8 @@
 
 **Tech Stack:** Nuxt 4, UnoCSS (`presetWind3`), `@nuxt/fonts` (new), Vitest + `@vue/test-utils` + `happy-dom` + `@vitejs/plugin-vue` (new, dev-only), `@nuxt/content` (existing, unchanged schema).
 
+**Reference mockup:** [2026-08-02-parchment-ink-redesign-mockup.png](2026-08-02-parchment-ink-redesign-mockup.png) — the original hand-sketched design this plan implements. Consult it directly for spacing, proportions, and detail (e.g. brush-stroke placement, "What I do" icon style, TOC sidebar width) that prose can't fully capture.
+
 ## Global Constraints
 
 - Dark mode: existing `dark:*` Tailwind/UnoCSS classes in `AppNav.vue` and `default.vue` are preserved as-is — no new dark-mode-specific variants are introduced for new components unless explicitly stated in a task.
