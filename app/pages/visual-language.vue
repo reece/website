@@ -95,6 +95,17 @@
             </p>
             <BrushStroke color="var(--ink)" />
           </div>
+
+          <div>
+            <p class="text-xs uppercase tracking-wide opacity-60 mb-1">Brush image — raster texture, recolorable via
+              CSS mask</p>
+            <div class="grid grid-cols-2 gap-4">
+              <BrushImage name="brush1" color="var(--slate)" />
+              <BrushImage name="brush2" color="var(--forest)" />
+              <BrushImage name="brush3" color="var(--rust)" />
+              <BrushImage name="brush4" color="var(--ink)" />
+            </div>
+          </div>
         </div>
       </section>
 
