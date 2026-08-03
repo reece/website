@@ -7,10 +7,13 @@
     "build": "nuxt build",
     "generate": "nuxt generate",
     "preview": "nuxt preview",
-    "postinstall": "nuxt prepare"
+    "postinstall": "nuxt prepare",
+    "test": "vitest run",
+    "test:watch": "vitest"
   },
   "dependencies": {
     "@nuxt/content": "^3",
+    "@nuxt/fonts": "^0.14.0",
     "@nuxtjs/color-mode": "^4.0.1",
     "nuxt": "^4"
   },
@@ -18,7 +21,11 @@
     "@iconify-json/ph": "^1.2.2",
     "@unocss/nuxt": "latest",
     "@unocss/reset": "latest",
+    "@vitejs/plugin-vue": "^6.0.8",
+    "@vue/test-utils": "^2.4.11",
     "better-sqlite3": "latest",
-    "unocss": "latest"
+    "happy-dom": "^20.11.1",
+    "unocss": "latest",
+    "vitest": "^4.1.10"
   }
 }

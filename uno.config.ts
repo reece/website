@@ -12,6 +12,19 @@ export default defineConfig({
     }),
     presetTypography(),
   ],
+  theme: {
+    colors: {
+      paper: 'var(--paper)',
+      tan: 'var(--tan)',
+      ink: 'var(--ink)',
+      slate: 'var(--slate)',
+      forest: 'var(--forest)',
+    },
+    fontFamily: {
+      display: '"Source Serif 4", Georgia, serif',
+      body: '"Inter", system-ui, sans-serif',
+    },
+  },
   shortcuts: {
     'link': 'text-blue-600 hover:text-blue-800 dark:text-blue-400 dark:hover:text-blue-200 transition-colors',
     'prose-container': 'prose prose-neutral dark:prose-invert max-w-none',

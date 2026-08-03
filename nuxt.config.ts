@@ -6,6 +6,7 @@ export default defineNuxtConfig({
     '@nuxt/content',
     '@unocss/nuxt',
     '@nuxtjs/color-mode',
+    '@nuxt/fonts',
   ],
 
   colorMode: {
@@ -22,5 +23,6 @@ export default defineNuxtConfig({
 
   css: [
     '@unocss/reset/tailwind.css',
+    '~/assets/css/theme.css',
   ],
 })
