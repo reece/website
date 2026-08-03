@@ -20,6 +20,7 @@ export default defineConfig({
       ink: 'var(--ink)',
       slate: 'var(--slate)',
       forest: 'var(--forest)',
+      rust: 'var(--rust)',
     },
     fontFamily: {
       display: '"Source Serif 4", Georgia, serif',

@@ -42,18 +42,22 @@
 
       <section>
         <h2 class="font-display text-xl font-semibold mb-4">Color palette</h2>
-        <div class="flex flex-wrap gap-4">
-          <RoughSwatch
-            v-for="(swatch, index) in swatches"
-            :key="swatch.name"
-            :fill="swatch.value"
-            :text-color="swatch.textOn"
-            :seed="index"
-            class="w-16 h-16 sm:w-20 sm:h-20"
-          >
-            <span>{{ swatch.name }}</span>
-            <span class="text-[10px] opacity-80">{{ swatch.hex }}</span>
-          </RoughSwatch>
+        <div class="space-y-6">
+          <ContrastBackdrop v-for="tier in tiers" :key="tier.name" :swatch-size="56" :swatch-size-sm="80" class="w-full">
+            <div class="flex gap-2 sm:gap-4 justify-center">
+              <RoughSwatch
+                v-for="(swatch, index) in tier.swatches"
+                :key="swatch.name"
+                :fill="swatch.value"
+                :text-color="swatch.textOn"
+                :seed="index"
+                class="w-14 h-14 sm:w-20 sm:h-20 shrink-0"
+              >
+                <span class="text-[10px] sm:text-xs">{{ swatch.name }}</span>
+                <span class="text-[8px] sm:text-[10px] opacity-80">{{ swatch.hex }}</span>
+              </RoughSwatch>
+            </div>
+          </ContrastBackdrop>
         </div>
       </section>
 
@@ -78,13 +82,24 @@ definePageMeta({ layout: 'blank' })
 
 useSeoMeta({ title: 'Visual Language · Reece Hart' })
 
-const swatches = [
-  { name: 'white', value: '#FFFFFF', textOn: 'var(--ink)', hex: '#FFFFFF' },
-  { name: 'paper', value: 'var(--paper)', textOn: 'var(--ink)', hex: '#FAF8F5' },
-  { name: 'linen', value: 'var(--linen)', textOn: 'var(--ink)', hex: '#EFEAE1' },
-  { name: 'sand', value: 'var(--sand)', textOn: 'var(--ink)', hex: '#E5E1D6' },
-  { name: 'ink', value: 'var(--ink)', textOn: 'var(--paper)', hex: '#52504A' },
-  { name: 'slate', value: 'var(--slate)', textOn: 'var(--paper)', hex: '#365C7A' },
-  { name: 'forest', value: 'var(--forest)', textOn: 'var(--paper)', hex: '#6A7C6E' },
+const tiers = [
+  {
+    name: 'light',
+    swatches: [
+      { name: 'white', value: '#FFFFFF', textOn: 'var(--ink)', hex: '#FFFFFF' },
+      { name: 'paper', value: 'var(--paper)', textOn: 'var(--ink)', hex: '#FAF8F5' },
+      { name: 'linen', value: 'var(--linen)', textOn: 'var(--ink)', hex: '#EFEAE1' },
+      { name: 'sand', value: 'var(--sand)', textOn: 'var(--ink)', hex: '#E5E1D6' },
+    ],
+  },
+  {
+    name: 'dark',
+    swatches: [
+      { name: 'ink', value: 'var(--ink)', textOn: 'var(--paper)', hex: '#52504A' },
+      { name: 'slate', value: 'var(--slate)', textOn: 'var(--paper)', hex: '#365C7A' },
+      { name: 'forest', value: 'var(--forest)', textOn: 'var(--paper)', hex: '#6A7C6E' },
+      { name: 'rust', value: 'var(--rust)', textOn: 'var(--paper)', hex: '#B7410E' },
+    ],
+  },
 ]
 </script>
