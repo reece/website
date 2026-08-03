@@ -107,7 +107,7 @@ const tiers = [
       { name: 'ink', value: 'var(--ink)', textOn: 'var(--paper)', hex: '#52504A' },
       { name: 'slate', value: 'var(--slate)', textOn: 'var(--paper)', hex: '#365C7A' },
       { name: 'forest', value: 'var(--forest)', textOn: 'var(--paper)', hex: '#6A7C6E' },
-      { name: 'rust', value: 'var(--rust)', textOn: 'var(--paper)', hex: '#B7410E' },
+      { name: 'rust', value: 'var(--rust)', textOn: 'var(--paper)', hex: '#BC5324' },
     ],
   },
 ]
