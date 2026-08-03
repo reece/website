@@ -1,11 +1,14 @@
 <template>
-  <div class="min-h-screen flex flex-col bg-white dark:bg-neutral-950 text-neutral-900 dark:text-neutral-100">
+  <div class="min-h-screen flex flex-col bg-paper dark:bg-neutral-950 text-ink dark:text-neutral-100 font-body">
     <AppNav />
     <main class="flex-1 max-w-3xl mx-auto w-full px-6 py-10">
       <slot />
     </main>
-    <footer class="border-t border-neutral-200 dark:border-neutral-800 py-6 text-center text-sm text-neutral-500">
-      © {{ year }} Reece Hart
+    <footer>
+      <BrushStroke flip color="var(--forest)" />
+      <p class="py-6 text-center text-sm opacity-60">
+        © {{ year }} Reece Hart
+      </p>
     </footer>
   </div>
 </template>
