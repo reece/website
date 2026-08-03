@@ -38,6 +38,7 @@ const TRANSFORMS = {
   both: 'scale(-1, -1)',
 } as const
 
+// Built as a string, not an object: happy-dom's CSSOM drops mask-image on object-form :style bindings, which would break the tests (no real-browser impact).
 const style = computed(() => {
   const url = BRUSH_URLS[props.name]
   const parts = [
