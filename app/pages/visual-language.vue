@@ -81,7 +81,8 @@ useSeoMeta({ title: 'Visual Language · Reece Hart' })
 const swatches = [
   { name: 'white', value: '#FFFFFF', textOn: 'var(--ink)', hex: '#FFFFFF' },
   { name: 'paper', value: 'var(--paper)', textOn: 'var(--ink)', hex: '#FAF8F5' },
-  { name: 'tan', value: 'var(--tan)', textOn: 'var(--ink)', hex: '#E7E2DB' },
+  { name: 'linen', value: 'var(--linen)', textOn: 'var(--ink)', hex: '#EFEAE1' },
+  { name: 'sand', value: 'var(--sand)', textOn: 'var(--ink)', hex: '#E5E1D6' },
   { name: 'ink', value: 'var(--ink)', textOn: 'var(--paper)', hex: '#52504A' },
   { name: 'slate', value: 'var(--slate)', textOn: 'var(--paper)', hex: '#365C7A' },
   { name: 'forest', value: 'var(--forest)', textOn: 'var(--paper)', hex: '#6A7C6E' },

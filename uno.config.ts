@@ -15,7 +15,8 @@ export default defineConfig({
   theme: {
     colors: {
       paper: 'var(--paper)',
-      tan: 'var(--tan)',
+      linen: 'var(--linen)',
+      sand: 'var(--sand)',
       ink: 'var(--ink)',
       slate: 'var(--slate)',
       forest: 'var(--forest)',
