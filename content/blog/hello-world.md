@@ -2,6 +2,7 @@
 title: Hello, World
 date: "2026-08-02"
 description: The first post on reecehart.com — a quick note on what this site is for.
+tags: ["engineering"]
 ---
 
 Welcome to my site.
