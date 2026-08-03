@@ -1,6 +1,6 @@
 # Raster brush strokes via CSS mask
 
-Replace the current SVG/`feTurbulence`-generated brush strokes with real bristle-texture raster art (`brush1.webp`–`brush4.webp`, currently sitting at repo root), recolorable at will via CSS, without losing the existing SVG components.
+Add a new component to generate brush decorations using real bristle-texture raster art (`brush1.webp`–`brush4.webp`, currently sitting at repo root), recolorable at will via CSS. These are in addition to the existing SVG components.
 
 ## Goals
 
