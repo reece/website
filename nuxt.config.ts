@@ -13,6 +13,11 @@ export default defineNuxtConfig({
     classSuffix: '',
   },
 
+  components: [
+    { path: '~/components/ink', pathPrefix: false },
+    '~/components',
+  ],
+
   // Static generation for GitHub Pages
   nitro: {
     prerender: {

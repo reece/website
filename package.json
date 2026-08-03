@@ -26,6 +26,7 @@
     "better-sqlite3": "latest",
     "happy-dom": "^20.11.1",
     "unocss": "latest",
-    "vitest": "^4.1.10"
+    "vitest": "^4.1.10",
+    "vue": "^3.5.40"
   }
 }
