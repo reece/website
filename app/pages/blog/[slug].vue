@@ -12,7 +12,7 @@
       </p>
     </header>
 
-    <details v-if="toc.length" class="mb-8 md:hidden border border-sand rounded p-3">
+    <details v-if="toc.length" class="mb-8 md:hidden border border-border rounded p-3">
       <summary class="text-sm font-medium cursor-pointer">On this page</summary>
       <ul class="mt-2 space-y-1 text-sm">
         <li v-for="item in toc" :key="item.id">

@@ -21,6 +21,16 @@ export default defineConfig({
       slate: 'var(--slate)',
       forest: 'var(--forest)',
       rust: 'var(--rust)',
+
+      background: 'var(--background)',
+      foreground: 'var(--foreground)',
+      border: 'var(--border)',
+      primary: 'var(--primary)',
+      headings: 'var(--headings)',
+      accent: 'var(--accent)',
+      secondary: 'var(--secondary)',
+      subheadings: 'var(--subheadings)',
+      highlight: 'var(--highlight)',
     },
     fontFamily: {
       display: '"Source Serif 4", Georgia, serif',

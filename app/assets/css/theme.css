@@ -6,4 +6,14 @@
   --slate: #365C7A;
   --forest: #6A7C6E;
   --rust: #BC5324;
+
+  --background: var(--paper);
+  --foreground: var(--ink);
+  --border: var(--sand);
+  --primary: var(--slate);
+  --headings: var(--slate);
+  --accent: var(--slate);
+  --secondary: var(--forest);
+  --subheadings: var(--forest);
+  --highlight: var(--rust);
 }
