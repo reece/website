@@ -1,5 +1,5 @@
 <template>
-  <div class="inline-block p-[10px] bg-white">
+  <div class="inline-block p-[10px] bg-sand">
     <div
       class="relative grid contrast-backdrop"
       :style="{ '--band-h': `${bandHeight}px`, '--band-h-sm': `${bandHeightSm}px` }"
