@@ -1,0 +1,47 @@
+<template>
+  <div class="relative">
+    <svg
+      role="presentation"
+      aria-hidden="true"
+      viewBox="0 0 100 100"
+      preserveAspectRatio="none"
+      class="absolute inset-0 w-full h-full pointer-events-none"
+    >
+      <defs>
+        <filter :id="roughId" x="-15%" y="-15%" width="130%" height="130%">
+          <feTurbulence type="fractalNoise" baseFrequency="0.045 0.055" numOctaves="2" :seed="seed" result="noise" />
+          <feDisplacementMap in="SourceGraphic" in2="noise" scale="7" xChannelSelector="R" yChannelSelector="G" />
+        </filter>
+      </defs>
+      <rect
+        x="4"
+        y="4"
+        width="92"
+        height="92"
+        rx="10"
+        :fill="fill"
+        :filter="`url(#${roughId})`"
+      />
+    </svg>
+    <div class="relative w-full h-full flex flex-col items-center justify-center gap-0.5 text-xs text-center" :style="{ color: textColor }">
+      <slot />
+    </div>
+  </div>
+</template>
+
+<script setup lang="ts">
+import { useId } from 'vue'
+
+const props = withDefaults(defineProps<{
+  fill?: string
+  textColor?: string
+  seed?: number
+}>(), {
+  fill: 'var(--ink)',
+  textColor: 'var(--ink)',
+  seed: 3,
+})
+
+const instanceId = useId()
+const roughId = `swatch-fill-rough-${instanceId}`
+</script>

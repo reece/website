@@ -28,3 +28,4 @@ archive
 # Brainstorming companion
 .superpowers/
 .worktrees
+.playwright-mcp
