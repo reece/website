@@ -3,7 +3,7 @@
   <div
     role="presentation"
     aria-hidden="true"
-    class="w-full h-16 md:h-24"
+    class="w-full"
     :style="style"
   />
 </template>
@@ -20,6 +20,15 @@ const BRUSH_URLS = {
   brush2,
   brush3,
   brush4,
+} as const
+
+// Native pixel dimensions of each source webp, used to preserve aspect ratio
+// instead of stretching every brush into the same fixed-height box.
+const BRUSH_ASPECT_RATIOS = {
+  brush1: 1585 / 193,
+  brush2: 1508 / 188,
+  brush3: 1617 / 74,
+  brush4: 1450 / 106,
 } as const
 
 const props = withDefaults(defineProps<{
@@ -42,6 +51,7 @@ const TRANSFORMS = {
 const style = computed(() => {
   const url = BRUSH_URLS[props.name]
   const parts = [
+    `aspect-ratio: ${BRUSH_ASPECT_RATIOS[props.name]}`,
     `background-color: ${props.color}`,
     `mask-image: url(${url})`,
     `-webkit-mask-image: url(${url})`,
