@@ -50,4 +50,14 @@ describe('brushImage', () => {
     const wrapper = mount(BrushImage, { props: { name: 'brush1', flip: 'both' } })
     expect(wrapper.attributes('style')).toContain('transform: scale(-1, -1)')
   })
+
+  it('uses the natural aspect ratio by default', () => {
+    const wrapper = mount(BrushImage, { props: { name: 'brush1' } })
+    expect(wrapper.attributes('style')).toContain(`aspect-ratio: ${1585 / 193}`)
+  })
+
+  it('halves the derived height when heightScale is 0.5', () => {
+    const wrapper = mount(BrushImage, { props: { name: 'brush1', heightScale: 0.5 } })
+    expect(wrapper.attributes('style')).toContain(`aspect-ratio: ${(1585 / 193) / 0.5}`)
+  })
 })

@@ -35,9 +35,11 @@ const props = withDefaults(defineProps<{
   name: keyof typeof BRUSH_URLS
   color?: string
   flip?: 'none' | 'horizontal' | 'vertical' | 'both'
+  heightScale?: number
 }>(), {
   color: 'currentColor',
   flip: 'none',
+  heightScale: 1,
 })
 
 const TRANSFORMS = {
@@ -51,7 +53,7 @@ const TRANSFORMS = {
 const style = computed(() => {
   const url = BRUSH_URLS[props.name]
   const parts = [
-    `aspect-ratio: ${BRUSH_ASPECT_RATIOS[props.name]}`,
+    `aspect-ratio: ${BRUSH_ASPECT_RATIOS[props.name] / props.heightScale}`,
     `background-color: ${props.color}`,
     `mask-image: url(${url})`,
     `-webkit-mask-image: url(${url})`,
