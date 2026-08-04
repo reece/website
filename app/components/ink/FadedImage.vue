@@ -1,16 +1,15 @@
 <template>
-  <NuxtImg
-    :src="src"
-    :alt="alt"
-    class="w-full h-full object-cover rounded-xl"
-    :style="faded ? maskStyle : undefined"
-  />
+  <div class="relative w-full h-full rounded-xl overflow-hidden">
+    <NuxtImg :src="src" :alt="alt" class="w-full h-full object-cover" />
+    <div v-if="faded" class="absolute inset-0 pointer-events-none" :style="fadeStyle" />
+  </div>
 </template>
 
 <script setup lang="ts">
 /**
- * Photo with rounded corners and an optional radial-gradient fade to transparent at the
- * edges, for dropping real photography into the ink design system without a hard rectangle.
+ * Photo with rounded corners and, optionally, a soft fade to the page background around
+ * its entire perimeter — for dropping real photography into the ink design system without
+ * a hard-edged rectangle.
  *
  * @example
  * <FadedImage src="/images/sf-from-marin.png" alt="San Francisco Bay seen from Marin" faded />
@@ -22,14 +21,13 @@ const props = withDefaults(defineProps<{
   src: string
   /** Accessible alt text. */
   alt: string
-  /** Fade the image to transparent at the edges via a radial-gradient mask. */
+  /** Fade the image to the page background around its perimeter via an inset box-shadow. */
   faded?: boolean
 }>(), {
   faded: false,
 })
 
-const maskStyle = computed(() => {
-  const gradient = 'radial-gradient(ellipse farthest-side at center, black 70%, transparent 100%)'
-  return `mask-image: ${gradient}; -webkit-mask-image: ${gradient}`
-})
+const fadeStyle = computed(() =>
+  'box-shadow: inset 0 0 2.5rem 1.5rem var(--paper); border-radius: inherit',
+)
 </script>
