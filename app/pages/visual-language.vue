@@ -186,6 +186,33 @@
       </section>
 
       <section>
+        <h2 class="font-display text-xl font-semibold mb-4">Paper &amp; Textures</h2>
+        <p class="text-sm mb-6">
+          Subtle background textures for depth and warmth — apply sparingly, as a backdrop layer via a plain
+          CSS class (e.g. <code>bg-background texture-paper-grain-light</code>) on any element. None of these
+          set a background color, so they compose with whatever surface color is already there.
+        </p>
+        <div class="grid grid-cols-2 gap-4">
+          <div>
+            <div class="bg-background texture-paper-grain-light border border-border rounded h-32" />
+            <code class="text-xs opacity-60 mt-2 block">class="bg-background texture-paper-grain-light"</code>
+          </div>
+          <div>
+            <div class="bg-linen texture-paper-fiber border border-border rounded h-32" />
+            <code class="text-xs opacity-60 mt-2 block">class="bg-linen texture-paper-fiber"</code>
+          </div>
+          <div>
+            <div class="texture-grain-overlay border border-border rounded h-32" />
+            <code class="text-xs opacity-60 mt-2 block">class="texture-grain-overlay"</code>
+          </div>
+          <div>
+            <div class="bg-background texture-graph-paper border border-border rounded h-32" />
+            <code class="text-xs opacity-60 mt-2 block">class="bg-background texture-graph-paper"</code>
+          </div>
+        </div>
+      </section>
+
+      <section>
         <h2 class="font-display text-xl font-semibold mb-4">Illustration placeholder</h2>
         <SketchPlaceholder label="Sample illustration placeholder" class="max-w-sm" />
         <code class="text-xs opacity-60 mt-2 block">&lt;SketchPlaceholder label="Sample illustration placeholder" /&gt;</code>

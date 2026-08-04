@@ -1,0 +1,31 @@
+/* Paper & grain textures — apply sparingly as a backdrop layer, e.g.
+   <div class="bg-background texture-paper-grain-light">. None of these
+   set background-color, so they compose with whatever surface color the
+   element already has. */
+
+.texture-paper-grain-light {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='turbulence' baseFrequency='0.3' numOctaves='3' seed='29'/%3E%3CfeColorMatrix type='matrix' values='0 0 0 0 0.32  0 0 0 0 0.31  0 0 0 0 0.29  2.6 0 0 0 -1.35'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+
+.texture-paper-fiber {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.015 0.15' numOctaves='3' seed='11'/%3E%3CfeColorMatrix type='matrix' values='0 0 0 0 0.32  0 0 0 0 0.31  0 0 0 0 0.29  0 0 0 0.08 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+
+/* Real photographed bluestone, not procedural — feTurbulence can't
+   convincingly fake granite's irregular veining. Sized to cover and never
+   repeated: at 1500x1500 it isn't seamlessly tileable, so repeating it
+   would show a hard seam at every tile edge. */
+.texture-grain-overlay {
+  background-image: url("../images/bluestone.webp");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.texture-graph-paper {
+  --texture-graph-color: color-mix(in srgb, var(--primary) 8%, transparent);
+  background-image:
+    linear-gradient(var(--texture-graph-color) 1px, transparent 1px),
+    linear-gradient(90deg, var(--texture-graph-color) 1px, transparent 1px);
+  background-size: 20px 20px;
+}

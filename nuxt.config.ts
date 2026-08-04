@@ -29,5 +29,6 @@ export default defineNuxtConfig({
   css: [
     '@unocss/reset/tailwind.css',
     '~/assets/css/theme.css',
+    '~/assets/css/textures.css',
   ],
 })
