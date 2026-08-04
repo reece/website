@@ -9,19 +9,19 @@
       I build systems and tools that turn complex data into understanding and ideas into impact.
     </p>
 
-    <p v-if="enjoyPhrases?.length" class="font-body text-4xl mb-6">
-      I enjoy...
-      <br/>
-      <PhraseCarousel :phrases="enjoyPhrases" class="text-highlight font-ad font-medium" />
-    </p>
-
     <div class="grid sm:grid-cols-2 gap-8 items-center mb-12">
       <div class="prose-container">
         <ContentRenderer v-if="page" :value="page" />
         <p v-else class="opacity-60">Coming soon.</p>
       </div>
-      <FadedImage src="/images/sf-from-marin.png" alt="San Francisco Bay seen from Marin" faded />
+      <NuxtImg src="/images/sf-from-marin.png" alt="San Francisco Bay seen from Marin" />
     </div>
+    
+    <p v-if="enjoyPhrases?.length" class="font-body text-4xl mb-6">
+      I enjoy...
+      <br/>
+      <PhraseCarousel :phrases="enjoyPhrases" class="text-highlight font-ad font-medium" />
+    </p>
 
     <section class="mb-12">
       <h2 class="font-display text-xl font-semibold mb-6">What I do</h2>
@@ -33,7 +33,7 @@
       </div>
     </section>
 
-    <InkRule class="mb-12" />
+    <InkRule variant="fine" color="var(--highlight)" class="mb-12" />
 
     <section>
       <h2 class="font-display text-xl font-semibold mb-4">Contact</h2>
