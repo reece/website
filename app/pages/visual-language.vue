@@ -23,21 +23,21 @@
             </tr>
           </thead>
           <tbody>
-            <tr v-for="color in colors" :key="color.name" class="border-b border-border">
-              <td class="py-3 pr-4">
+            <tr v-for="color in sortedColors" :key="color.name" class="border-b border-border">
+              <td class="py-1 pr-4">
                 <RoughSwatch :fill="color.value" :text-color="color.textOn" :seed="color.seed"
                   class="w-28 h-7 sm:w-40 sm:h-10" />
               </td>
-              <td class="py-3 pr-4 align-middle">
+              <td class="py-1 pr-4 align-middle">
                 <span v-if="color.roles.length === 0" class="opacity-50 italic">unassigned</span>
                 <code v-else class="text-xs">{{ color.roles.join(', ') }}</code>
               </td>
-              <td class="py-3 pr-4 align-middle opacity-80 whitespace-nowrap">
-                <div>{{ color.name }}</div>
+              <td class="py-1 pr-4 align-middle opacity-80 whitespace-nowrap">
+                <div><code>{{ color.name }}</code></div>
                 <div class="text-xs">{{ color.hex }}</div>
                 <div class="text-xs">{{ color.oklch }}</div>
               </td>
-              <td class="py-3 align-middle opacity-80">{{ color.uses }}</td>
+              <td class="py-1 align-middle opacity-80">{{ color.uses }}</td>
             </tr>
           </tbody>
         </table>
@@ -315,5 +315,17 @@ const colors = [
   { name: 'slate', value: 'var(--slate)', textOn: 'var(--paper)', seed: 5, roles: ['primary', 'headings', 'accent'], uses: 'Links, hover states, active nav/tag — the main interactive color.', hex: '#365C7A', oklch: 'oklch(46.0% 0.0656 243.7)' },
   { name: 'forest', value: 'var(--forest)', textOn: 'var(--paper)', seed: 6, roles: ['secondary', 'subheadings'], uses: 'Reserved for a secondary accent (not yet used).', hex: '#6A7C6E', oklch: 'oklch(56.7% 0.0301 152.0)' },
   { name: 'rust', value: 'var(--rust)', textOn: 'var(--paper)', seed: 7, roles: ['highlight'], uses: 'Reserved for visual emphasis/pop (not yet used).', hex: '#BC5324', oklch: 'oklch(56.9% 0.1479 42.3)' },
+  { name: 'gold', value: 'var(--gold)', textOn: 'var(--paper)', seed: 8, roles: [], uses: 'Unassigned.', hex: '#B8860B', oklch: 'oklch(65.2% 0.1322 81.6)' },
 ]
+
+const rolePriority = ['background', 'border', 'foreground', 'primary', 'secondary', 'highlight']
+
+function firstRoleRank(color: typeof colors[number]) {
+  const ranks = color.roles.map(role => rolePriority.indexOf(role)).filter(rank => rank !== -1)
+  return ranks.length === 0 ? rolePriority.length : Math.min(...ranks)
+}
+
+const sortedColors = computed(() =>
+  [...colors].sort((a, b) => firstRoleRank(a) - firstRoleRank(b)),
+)
 </script>

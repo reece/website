@@ -21,6 +21,7 @@ export default defineConfig({
       slate: 'var(--slate)',
       forest: 'var(--forest)',
       rust: 'var(--rust)',
+      gold: 'var(--gold)',
 
       background: 'var(--background)',
       foreground: 'var(--foreground)',
