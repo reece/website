@@ -84,10 +84,10 @@
       <section>
         <h2 class="font-display text-xl font-semibold mb-4">Brush Strokes</h2>
         <p class="text-sm mb-6">
-          Two families: <code>BrushImage</code> (raster bristle-texture webp, recolored via CSS
-          <code>mask-image</code>) and <code>BrushStroke</code> (procedural SVG with a turbulence filter).
-          <code>BrushImage</code> accepts <code>name</code> (which source image), <code>color</code> (any CSS
-          color, via mask), <code>flip</code> (<code>none</code> / <code>horizontal</code> / <code>vertical</code> /
+          Two families: <code>MaskImage</code> (raster webp, recolored via CSS <code>mask-image</code>) and
+          <code>BrushStroke</code> (procedural SVG with a turbulence filter). <code>MaskImage</code> accepts
+          <code>name</code> (a <code>"directory/basename"</code> slug), <code>color</code> (any CSS color, via
+          mask), <code>flip</code> (<code>none</code> / <code>horizontal</code> / <code>vertical</code> /
           <code>both</code>), and <code>heightScale</code> (shrink the rendered height below its natural aspect
           ratio).
         </p>
@@ -96,20 +96,20 @@
             <h3 class="font-display text-lg font-semibold mb-3">Brush Image</h3>
             <div class="space-y-4">
               <div>
-                <BrushImage name="brush1" color="var(--slate)" />
-                <code class="text-xs opacity-60">&lt;BrushImage name="brush1" color="var(--slate)" /&gt;</code>
+                <MaskImage name="brushes/thick-taper-1" color="var(--slate)" />
+                <code class="text-xs opacity-60">&lt;MaskImage name="brushes/thick-taper-1" color="var(--slate)" /&gt;</code>
               </div>
               <div>
-                <BrushImage name="brush2" color="var(--forest)" flip="horizontal" />
-                <code class="text-xs opacity-60">&lt;BrushImage name="brush2" color="var(--forest)" flip="horizontal" /&gt;</code>
+                <MaskImage name="brushes/thick-box-taper-1" color="var(--forest)" flip="horizontal" />
+                <code class="text-xs opacity-60">&lt;MaskImage name="brushes/thick-box-taper-1" color="var(--forest)" flip="horizontal" /&gt;</code>
               </div>
               <div>
-                <BrushImage name="brush3" color="var(--rust)" :height-scale="0.5" />
-                <code class="text-xs opacity-60">&lt;BrushImage name="brush3" color="var(--rust)" :height-scale="0.5" /&gt;</code>
+                <MaskImage name="brushes/medium-taper-1" color="var(--rust)" :height-scale="0.5" />
+                <code class="text-xs opacity-60">&lt;MaskImage name="brushes/medium-taper-1" color="var(--rust)" :height-scale="0.5" /&gt;</code>
               </div>
               <div>
-                <BrushImage name="brush4" color="var(--ink)" />
-                <code class="text-xs opacity-60">&lt;BrushImage name="brush4" color="var(--ink)" /&gt;</code>
+                <MaskImage name="brushes/medium-taper-2" color="var(--ink)" />
+                <code class="text-xs opacity-60">&lt;MaskImage name="brushes/medium-taper-2" color="var(--ink)" /&gt;</code>
               </div>
             </div>
           </div>
@@ -141,6 +141,31 @@
             <p class="text-xs uppercase tracking-wide opacity-60 mb-1">Pencil note — for annotations and human touches
             </p>
             <PencilNote />
+          </div>
+          <div>
+            <h3 class="font-display text-lg font-semibold mb-3">Line Image</h3>
+            <div class="space-y-4">
+              <div>
+                <MaskImage name="lines/thin" color="var(--slate)" />
+                <code class="text-xs opacity-60">&lt;MaskImage name="lines/thin" color="var(--slate)" /&gt;</code>
+              </div>
+              <div>
+                <MaskImage name="lines/medium" color="var(--forest)" />
+                <code class="text-xs opacity-60">&lt;MaskImage name="lines/medium" color="var(--forest)" /&gt;</code>
+              </div>
+              <div>
+                <MaskImage name="lines/thick" color="var(--rust)" />
+                <code class="text-xs opacity-60">&lt;MaskImage name="lines/thick" color="var(--rust)" /&gt;</code>
+              </div>
+              <div>
+                <MaskImage name="lines/dotted" color="var(--ink)" />
+                <code class="text-xs opacity-60">&lt;MaskImage name="lines/dotted" color="var(--ink)" /&gt;</code>
+              </div>
+              <div>
+                <MaskImage name="lines/wavy" color="var(--slate)" />
+                <code class="text-xs opacity-60">&lt;MaskImage name="lines/wavy" color="var(--slate)" /&gt;</code>
+              </div>
+            </div>
           </div>
         </div>
       </section>
