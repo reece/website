@@ -15,6 +15,7 @@ export default defineNuxtConfig({
 
   components: [
     { path: '~/components/ink', pathPrefix: false },
+    { path: '~/components/md-aliases', pathPrefix: false },
     '~/components',
   ],
 

@@ -10,3 +10,6 @@ Welcome to my site.
 I'm Reece Hart — computational biologist and bioinformaticist. This is where I'll write about genomics, structural biology, software engineering, and whatever else I'm thinking about.
 
 More to come.
+
+::simple-line
+::
