@@ -20,7 +20,7 @@
         <ContentRenderer v-if="page" :value="page" />
         <p v-else class="opacity-60">Coming soon.</p>
       </div>
-      <SketchPlaceholder label="Diagram: data, domain, and design intersecting" />
+      <FadedImage src="/images/sf-from-marin.png" alt="San Francisco Bay seen from Marin" faded />
     </div>
 
     <section class="mb-12">
@@ -32,6 +32,8 @@
         </div>
       </div>
     </section>
+
+    <InkRule class="mb-12" />
 
     <section>
       <h2 class="font-display text-xl font-semibold mb-4">Contact</h2>

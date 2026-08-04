@@ -7,6 +7,7 @@ export default defineNuxtConfig({
     '@unocss/nuxt',
     '@nuxtjs/color-mode',
     '@nuxt/fonts',
+    '@nuxt/image',
   ],
 
   colorMode: {
