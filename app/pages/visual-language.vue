@@ -167,6 +167,31 @@
               </div>
             </div>
           </div>
+          <div>
+            <h3 class="font-display text-lg font-semibold mb-3">Ink Rule</h3>
+            <div class="space-y-4">
+              <div>
+                <InkRule variant="fine" color="var(--slate)" />
+                <code class="text-xs opacity-60">&lt;InkRule variant="fine" color="var(--slate)" /&gt;</code>
+              </div>
+              <div>
+                <InkRule variant="organic" color="var(--forest)" />
+                <code class="text-xs opacity-60">&lt;InkRule variant="organic" color="var(--forest)" /&gt;</code>
+              </div>
+              <div>
+                <InkRule variant="brush" color="var(--rust)" />
+                <code class="text-xs opacity-60">&lt;InkRule variant="brush" color="var(--rust)" /&gt;</code>
+              </div>
+              <div>
+                <InkRule variant="dotted" color="var(--ink)" />
+                <code class="text-xs opacity-60">&lt;InkRule variant="dotted" color="var(--ink)" /&gt;</code>
+              </div>
+              <div>
+                <InkRule variant="squiggle" color="var(--slate)" />
+                <code class="text-xs opacity-60">&lt;InkRule variant="squiggle" color="var(--slate)" /&gt;</code>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
 
@@ -213,6 +238,32 @@
       </section>
 
       <section>
+        <h2 class="font-display text-xl font-semibold mb-4">Markdown Aliases</h2>
+        <p class="text-sm mb-6">
+          MDC shorthand for components commonly used in markdown content, defined under
+          <code>app/components/md-aliases</code>.
+        </p>
+        <table class="w-full text-sm border-collapse">
+          <thead>
+            <tr class="border-b border-border">
+              <th class="text-left font-medium py-2 pr-4">Use</th>
+              <th class="text-left font-medium py-2">Example</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr v-for="alias in markdownAliases" :key="alias.use" class="border-b border-border">
+              <td class="py-3 pr-4 align-middle">
+                <code class="text-xs">{{ alias.use }}</code>
+              </td>
+              <td class="py-3 align-middle">
+                <component :is="alias.component" />
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+
+      <section>
         <h2 class="font-display text-xl font-semibold mb-4">Illustration placeholder</h2>
         <SketchPlaceholder label="Sample illustration placeholder" class="max-w-sm" />
         <code class="text-xs opacity-60 mt-2 block">&lt;SketchPlaceholder label="Sample illustration placeholder" /&gt;</code>
@@ -224,6 +275,8 @@
 </template>
 
 <script setup lang="ts">
+import SimpleLine from '~/components/md-aliases/SimpleLine.vue'
+
 definePageMeta({ layout: 'blank' })
 
 useSeoMeta({ title: 'Visual Language · Reece Hart' })
@@ -249,11 +302,15 @@ const tiers = [
   },
 ]
 
+const markdownAliases = [
+  { use: '::simple-line', component: SimpleLine },
+]
+
 const colors = [
   { name: 'white', value: '#FFFFFF', textOn: 'var(--ink)', seed: 0, roles: [], uses: 'Unassigned.', hex: '#FFFFFF', oklch: 'oklch(100.0% 0 0)' },
   { name: 'paper', value: 'var(--paper)', textOn: 'var(--ink)', seed: 1, roles: ['background'], uses: 'Page and section background.', hex: '#FAF8F5', oklch: 'oklch(98.0% 0.0045 78.3)' },
   { name: 'linen', value: 'var(--linen)', textOn: 'var(--ink)', seed: 2, roles: [], uses: 'Unassigned.', hex: '#EFEAE1', oklch: 'oklch(93.8% 0.0132 82.4)' },
-  { name: 'sand', value: 'var(--sand)', textOn: 'var(--ink)', seed: 3, roles: ['border'], uses: 'Dividers and box borders (e.g. mobile TOC, contrast backdrop).', hex: '#E5E1D6', oklch: 'oklch(91.0% 0.0154 90.2)' },
+  { name: 'sand', value: 'var(--sand)', textOn: 'var(--ink)', seed: 3, roles: ['border'], uses: 'Dividers and box borders (e.g. mobile TOC).', hex: '#E5E1D6', oklch: 'oklch(91.0% 0.0154 90.2)' },
   { name: 'ink', value: 'var(--ink)', textOn: 'var(--paper)', seed: 4, roles: ['foreground'], uses: 'Primary body text.', hex: '#52504A', oklch: 'oklch(43.1% 0.0100 91.6)' },
   { name: 'slate', value: 'var(--slate)', textOn: 'var(--paper)', seed: 5, roles: ['primary', 'headings', 'accent'], uses: 'Links, hover states, active nav/tag — the main interactive color.', hex: '#365C7A', oklch: 'oklch(46.0% 0.0656 243.7)' },
   { name: 'forest', value: 'var(--forest)', textOn: 'var(--paper)', seed: 6, roles: ['secondary', 'subheadings'], uses: 'Reserved for a secondary accent (not yet used).', hex: '#6A7C6E', oklch: 'oklch(56.7% 0.0301 152.0)' },
