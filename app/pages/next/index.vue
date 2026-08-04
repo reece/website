@@ -9,7 +9,7 @@
       </p>
       <div class="mt-8 flex flex-wrap gap-4">
         <MarkerUnderline color="var(--slate)">
-          <NuxtLink to="/about" class="font-body text-sm font-medium">
+          <NuxtLink to="/" class="font-body text-sm font-medium">
             About me →
           </NuxtLink>
         </MarkerUnderline>

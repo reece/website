@@ -41,8 +41,8 @@ function toggleColorMode() {
 }
 
 const links = [
-  { label: 'About', to: '/about' },
+  { label: 'About', to: '/' },
   { label: 'Blog', to: '/blog' },
-  { label: 'Projects', to: '/projects' },
+  { label: 'Projects', to: '/next/projects' },
 ]
 </script>
