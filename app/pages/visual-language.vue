@@ -83,27 +83,48 @@
 
       <section>
         <h2 class="font-display text-xl font-semibold mb-4">Brush Strokes</h2>
-        <div class="space-y-6">
+        <p class="text-sm mb-6">
+          Two families: <code>BrushImage</code> (raster bristle-texture webp, recolored via CSS
+          <code>mask-image</code>) and <code>BrushStroke</code> (procedural SVG with a turbulence filter).
+          <code>BrushImage</code> accepts <code>name</code> (which source image), <code>color</code> (any CSS
+          color, via mask), <code>flip</code> (<code>none</code> / <code>horizontal</code> / <code>vertical</code> /
+          <code>both</code>), and <code>heightScale</code> (shrink the rendered height below its natural aspect
+          ratio).
+        </p>
+        <div class="space-y-8">
           <div>
-            <p class="text-xs uppercase tracking-wide opacity-60 mb-1">Brush stroke — for section breaks and emphasis
-            </p>
-            <BrushStroke />
-          </div>
-
-          <div>
-            <p class="text-xs uppercase tracking-wide opacity-60 mb-1">Brush stroke — for section breaks and emphasis
-            </p>
-            <BrushStroke color="var(--ink)" />
-          </div>
-
-          <div>
-            <p class="text-xs uppercase tracking-wide opacity-60 mb-1">Brush image — raster texture, recolorable via
-              CSS mask</p>
+            <h3 class="font-display text-lg font-semibold mb-3">Brush Image</h3>
             <div class="space-y-4">
-              <BrushImage name="brush1" color="var(--slate)" />
-              <BrushImage name="brush2" color="var(--forest)" />
-              <BrushImage name="brush3" color="var(--rust)" />
-              <BrushImage name="brush4" color="var(--ink)" />
+              <div>
+                <BrushImage name="brush1" color="var(--slate)" />
+                <code class="text-xs opacity-60">&lt;BrushImage name="brush1" color="var(--slate)" /&gt;</code>
+              </div>
+              <div>
+                <BrushImage name="brush2" color="var(--forest)" flip="horizontal" />
+                <code class="text-xs opacity-60">&lt;BrushImage name="brush2" color="var(--forest)" flip="horizontal" /&gt;</code>
+              </div>
+              <div>
+                <BrushImage name="brush3" color="var(--rust)" :height-scale="0.5" />
+                <code class="text-xs opacity-60">&lt;BrushImage name="brush3" color="var(--rust)" :height-scale="0.5" /&gt;</code>
+              </div>
+              <div>
+                <BrushImage name="brush4" color="var(--ink)" />
+                <code class="text-xs opacity-60">&lt;BrushImage name="brush4" color="var(--ink)" /&gt;</code>
+              </div>
+            </div>
+          </div>
+
+          <div>
+            <h3 class="font-display text-lg font-semibold mb-3">Brush Stroke</h3>
+            <div class="space-y-4">
+              <div>
+                <BrushStroke />
+                <code class="text-xs opacity-60">&lt;BrushStroke /&gt;</code>
+              </div>
+              <div>
+                <BrushStroke color="var(--ink)" />
+                <code class="text-xs opacity-60">&lt;BrushStroke color="var(--ink)" /&gt;</code>
+              </div>
             </div>
           </div>
         </div>
