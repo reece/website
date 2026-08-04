@@ -1,8 +1,21 @@
 <script setup lang="ts">
+/**
+ * Decorative horizontal rule drawn as a hand-inked line or row of dots, for separating
+ * sections without a plain HTML `<hr>`.
+ *
+ * @example
+ * <InkRule variant="organic" color="var(--slate)" />
+ *
+ * @example Dotted variant
+ * <InkRule variant="dotted" width="60%" />
+ */
 withDefaults(
   defineProps<{
+    /** Line style to draw. */
     variant?: 'fine' | 'organic' | 'brush' | 'dotted' | 'squiggle'
+    /** CSS width of the rule. */
     width?: string
+    /** CSS color for the rule; accepts any valid CSS color value or var(). */
     color?: string
   }>(),
   {

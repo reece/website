@@ -10,5 +10,15 @@
 </template>
 
 <script setup lang="ts">
-defineProps<{ label?: string }>()
+/**
+ * Sketchy placeholder illustration (circles + a rough polyline) for empty states or
+ * unfinished content slots where no real image exists yet.
+ *
+ * @example
+ * <SketchPlaceholder label="Chart coming soon" />
+ */
+defineProps<{
+  /** Accessible label for the placeholder, exposed via a visually-hidden span. */
+  label?: string
+}>()
 </script>

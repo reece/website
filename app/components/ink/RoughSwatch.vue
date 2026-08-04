@@ -30,17 +30,34 @@
 </template>
 
 <script setup lang="ts">
+/**
+ * Hand-drawn, rough-edged swatch: an SVG rect roughened via feTurbulence/feDisplacementMap,
+ * with slotted content (e.g. a label) centered on top.
+ *
+ * @example
+ * <RoughSwatch fill="var(--accent)" text-color="var(--paper)">
+ *   Accent
+ * </RoughSwatch>
+ */
 import { useId } from 'vue'
 
 const props = withDefaults(defineProps<{
+  /** CSS color for the swatch fill; accepts any valid CSS color value or var(). */
   fill?: string
+  /** Text color for slotted content. */
   textColor?: string
+  /** Seed for the fractalNoise filter — vary across sibling swatches to avoid visually identical roughness. */
   seed?: number
 }>(), {
   fill: 'var(--ink)',
   textColor: 'var(--ink)',
   seed: 3,
 })
+
+defineSlots<{
+  /** Label content centered over the swatch. */
+  default(): unknown
+}>()
 
 const instanceId = useId()
 const roughId = `swatch-fill-rough-${instanceId}`

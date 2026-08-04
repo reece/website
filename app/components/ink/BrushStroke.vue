@@ -41,10 +41,19 @@
 </template>
 
 <script setup lang="ts">
+/**
+ * Hand-drawn brush-stroke band: a filled wavy shape with an overlaid stroke and ink-speckle
+ * texture, roughened via feTurbulence/feDisplacementMap. Used as a decorative section divider.
+ *
+ * @example
+ * <BrushStroke color="var(--accent)" flip />
+ */
 import { useId } from 'vue'
 
 const props = withDefaults(defineProps<{
+  /** CSS color for the stroke fill; accepts any valid CSS color value or var(). */
   color?: string
+  /** Mirror the stroke vertically. */
   flip?: boolean
 }>(), {
   color: 'var(--slate)',

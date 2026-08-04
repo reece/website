@@ -13,7 +13,16 @@
 </template>
 
 <script setup lang="ts">
-withDefaults(defineProps<{ color?: string }>(), {
+/**
+ * Thin, lightly wavy hand-drawn rule for subtle divider use (finer weight than InkRule).
+ *
+ * @example
+ * <ThinPenLine color="var(--slate)" />
+ */
+withDefaults(defineProps<{
+  /** CSS color for the line stroke; accepts any valid CSS color value or var(). */
+  color?: string
+}>(), {
   color: 'var(--ink)',
 })
 </script>

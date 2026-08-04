@@ -22,7 +22,21 @@
 </template>
 
 <script setup lang="ts">
-withDefaults(defineProps<{ color?: string }>(), {
+/**
+ * Hand-drawn wavy underline overlaid beneath slotted inline content, like a marker highlight.
+ *
+ * @example
+ * <MarkerUnderline color="var(--accent)">emphasized text</MarkerUnderline>
+ */
+withDefaults(defineProps<{
+  /** CSS color for the underline stroke; accepts any valid CSS color value or var(). */
+  color?: string
+}>(), {
   color: 'var(--slate)',
 })
+
+defineSlots<{
+  /** Inline content the underline is drawn beneath. */
+  default(): unknown
+}>()
 </script>

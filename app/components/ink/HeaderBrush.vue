@@ -12,7 +12,14 @@
 </template>
 
 <script setup lang="ts">
+/**
+ * Wide, irregular hand-brushed underline used behind page/section headers.
+ *
+ * @example
+ * <HeaderBrush color="var(--accent)" />
+ */
 withDefaults(defineProps<{
+  /** CSS color for the brush fill; accepts any valid CSS color value or var(). */
   color?: string
 }>(), {
   color: 'var(--slate)',

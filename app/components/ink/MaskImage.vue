@@ -9,6 +9,17 @@
 </template>
 
 <script setup lang="ts">
+/**
+ * Solid-color shape masked by one of the bundled brush/line webp textures, scaled to that
+ * texture's native aspect ratio. Used for hand-drawn brush marks and line accents in the
+ * ink design system.
+ *
+ * @example
+ * <MaskImage name="brushes/thick-taper-1" color="var(--ink)" />
+ *
+ * @example Flipped, scaled height
+ * <MaskImage name="lines/wavy" color="var(--accent)" flip="horizontal" :height-scale="1.5" />
+ */
 import { computed } from 'vue'
 import thickTaper1 from '../../assets/brushes/thick-taper-1.webp'
 import thickBoxTaper1 from '../../assets/brushes/thick-box-taper-1.webp'
@@ -47,9 +58,13 @@ const IMAGE_ASPECT_RATIOS = {
 } as const
 
 const props = withDefaults(defineProps<{
+  /** Key into the bundled brush/line texture set; determines the mask image and aspect ratio. */
   name: keyof typeof IMAGE_URLS
+  /** CSS color for the masked shape; accepts any valid CSS color value or var(). */
   color?: string
+  /** Mirror the texture horizontally, vertically, both, or not at all. */
   flip?: 'none' | 'horizontal' | 'vertical' | 'both'
+  /** Multiplier applied to the texture's native height (and thus its aspect ratio). */
   heightScale?: number
 }>(), {
   color: 'currentColor',
