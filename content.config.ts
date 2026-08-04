@@ -16,5 +16,12 @@ export default defineContentConfig({
       type: 'page',
       source: 'pages/**',
     }),
+    enjoyPhrases: defineCollection({
+      type: 'data',
+      source: 'data/enjoy-phrases.yml',
+      schema: z.object({
+        phrases: z.array(z.string()),
+      }),
+    }),
   },
 })

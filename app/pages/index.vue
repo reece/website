@@ -2,14 +2,16 @@
   <div class="font-body text-ink">
     <h1 class="font-display text-3xl font-semibold tracking-tight mb-8">Reece Hart</h1>
 
+    <h2 class="font-display text-4xl font-semibold tracking-tight mb-3">
+      Scientist. Engineer. Builder.
+    </h2>
+    <p class="font-body text-xl opacity-75 mb-6">
+      I build systems and tools that turn complex data into understanding and ideas into impact.
+    </p>
 
-      <h2 class="font-display text-4xl font-semibold tracking-tight mb-3">
-        Engineer. Scientist. Builder.
-      </h2>
-      <p class="font-body text-xl opacity-75 mb-6">
-        I build systems and tools that turn complex data into understanding and ideas into impact.
-      </p>
-
+    <p v-if="enjoyPhrases?.length" class="font-body text-xl mb-6">
+      I enjoy... <PhraseCarousel :phrases="enjoyPhrases" class="text-slate font-medium" />
+    </p>
 
     <div class="grid sm:grid-cols-2 gap-8 items-center mb-12">
       <div class="prose-container">
@@ -34,10 +36,12 @@
       <p class="text-sm opacity-75 mb-3">The best way to reach me is by email.</p>
       <ul class="space-y-2 text-sm">
         <li>
-          Email: <a href="mailto:reece@reecehart.com" class="text-slate hover:opacity-75 transition-opacity">reece@reecehart.com</a>
+          Email: <a href="mailto:reece@reecehart.com"
+            class="text-slate hover:opacity-75 transition-opacity">reece@reecehart.com</a>
         </li>
         <li>
-          GitHub: <a href="https://github.com/reece" target="_blank" rel="noopener noreferrer" class="text-slate hover:opacity-75 transition-opacity">github.com/reece</a>
+          GitHub: <a href="https://github.com/reece" target="_blank" rel="noopener noreferrer"
+            class="text-slate hover:opacity-75 transition-opacity">github.com/reece</a>
         </li>
       </ul>
     </section>
@@ -52,6 +56,11 @@ useSeoMeta({ title: 'About · Reece Hart' })
 const { data: page } = await useAsyncData('about', () =>
   queryCollection('pages').path('/pages/about').first(),
 )
+
+const { data: enjoyPhrasesData } = await useAsyncData('enjoy-phrases', () =>
+  queryCollection('enjoyPhrases').first(),
+)
+const enjoyPhrases = computed(() => enjoyPhrasesData.value?.phrases ?? [])
 
 const whatIDo = [
   { title: 'Build', body: 'I design and build software systems that are robust, maintainable, and actually used.' },
