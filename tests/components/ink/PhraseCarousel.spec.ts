@@ -41,7 +41,21 @@ describe('phraseCarousel', () => {
     expect(wrapper.vm.display).toBe('connecting with people')
   })
 
-  it.each(['fade', 'swipe-h', 'swipe-v', 'typing', 'scramble', 'morph'] as const)(
+  it.each([
+    'fade',
+    'swipe-left',
+    'swipe-right',
+    'swipe-up',
+    'swipe-down',
+    'typing',
+    'scramble',
+    'morph',
+    'twist',
+    'size-expand',
+    'blur',
+    'wave-rise',
+    'ink-bleed',
+  ] as const)(
     'advances via the %s transition without throwing',
     async (mode) => {
       const wrapper = mount(PhraseCarousel, {
@@ -53,7 +67,7 @@ describe('phraseCarousel', () => {
           intervalMs: 100_000,
         },
       })
-      await vi.advanceTimersByTimeAsync(100_000 + 3000)
+      await vi.advanceTimersByTimeAsync(100_000 + 3500)
       expect(wrapper.vm.display).toBe('connecting with people')
     },
   )
@@ -79,5 +93,32 @@ describe('phraseCarousel', () => {
     // intervalMs is large so a second cycle can't start within this window.
     await vi.advanceTimersByTimeAsync(100_000 + 3000)
     expect(wrapper.vm.display).toBe('connecting with people')
+  })
+
+  it('walks phrases in list order when phraseOrder is sequential', async () => {
+    const phrases = ['one', 'two', 'three']
+    const wrapper = mount(PhraseCarousel, {
+      props: { phrases, transitions: ['fade'], phraseOrder: 'sequential', intervalMs: 50 },
+    })
+    const seen: string[] = [wrapper.vm.display]
+    for (let i = 0; i < phrases.length + 1; i++) {
+      await vi.advanceTimersByTimeAsync(50 + 440)
+      seen.push(wrapper.vm.display)
+    }
+    expect(seen).toEqual(['one', 'two', 'three', 'one', 'two'])
+  })
+
+  it('never repeats the same phrase twice in a row when phraseOrder is random (the default)', async () => {
+    const phrases = ['one', 'two', 'three', 'four']
+    const wrapper = mount(PhraseCarousel, {
+      props: { phrases, transitions: ['fade'], intervalMs: 50 },
+    })
+    const seen: string[] = [wrapper.vm.display]
+    for (let i = 0; i < 20; i++) {
+      await vi.advanceTimersByTimeAsync(50 + 440)
+      seen.push(wrapper.vm.display)
+    }
+    for (let i = 1; i < seen.length; i++)
+      expect(seen[i]).not.toBe(seen[i - 1])
   })
 })

@@ -3,14 +3,16 @@
     <h1 class="font-display text-3xl font-semibold tracking-tight mb-8">Reece Hart</h1>
 
     <h2 class="font-display text-4xl font-semibold tracking-tight mb-3">
-      Scientist. Engineer. Builder.
+      Scientist. Engineer. Team Builder.
     </h2>
     <p class="font-body text-xl opacity-75 mb-6">
       I build systems and tools that turn complex data into understanding and ideas into impact.
     </p>
 
-    <p v-if="enjoyPhrases?.length" class="font-body text-xl mb-6">
-      I enjoy... <PhraseCarousel :phrases="enjoyPhrases" class="text-slate font-medium" />
+    <p v-if="enjoyPhrases?.length" class="font-body text-4xl mb-6">
+      I enjoy...
+      <br/>
+      <PhraseCarousel :phrases="enjoyPhrases" class="text-highlight font-italic font-medium" />
     </p>
 
     <div class="grid sm:grid-cols-2 gap-8 items-center mb-12">
