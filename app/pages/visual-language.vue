@@ -134,13 +134,13 @@
         <h2 class="font-display text-xl font-semibold mb-4">Ink Dividers</h2>
         <div class="space-y-6">
           <div>
-            <p class="text-xs uppercase tracking-wide opacity-60 mb-1">Thin pen line — for subtle separation</p>
-            <ThinPenLine />
-          </div>
-          <div>
-            <p class="text-xs uppercase tracking-wide opacity-60 mb-1">Pencil note — for annotations and human touches
-            </p>
-            <PencilNote />
+            <h3 class="font-display text-lg font-semibold mb-3">Thin Pen Line</h3>
+            <div class="space-y-4">
+              <div>
+                <ThinPenLine />
+                <code class="text-xs opacity-60">&lt;ThinPenLine /&gt;</code>
+              </div>
+            </div>
           </div>
           <div>
             <h3 class="font-display text-lg font-semibold mb-3">Line Image</h3>
@@ -178,6 +178,9 @@
             <MarkerUnderline color="var(--slate)">
               <span class="font-display text-lg">Sample link text</span>
             </MarkerUnderline>
+            <div class="mt-2">
+              <code class="text-xs opacity-60">&lt;MarkerUnderline color="var(--slate)"&gt;Sample link text&lt;/MarkerUnderline&gt;</code>
+            </div>
           </div>
         </div>
       </section>
@@ -185,6 +188,7 @@
       <section>
         <h2 class="font-display text-xl font-semibold mb-4">Illustration placeholder</h2>
         <SketchPlaceholder label="Sample illustration placeholder" class="max-w-sm" />
+        <code class="text-xs opacity-60 mt-2 block">&lt;SketchPlaceholder label="Sample illustration placeholder" /&gt;</code>
       </section>
     </div>
 
