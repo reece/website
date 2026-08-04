@@ -2,6 +2,12 @@
 export default defineNuxtConfig({
   compatibilityDate: '2025-11-01',
 
+  app: {
+    head: {
+      link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }],
+    },
+  },
+
   modules: [
     '@nuxt/content',
     '@unocss/nuxt',
