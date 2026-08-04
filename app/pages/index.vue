@@ -12,7 +12,7 @@
     <p v-if="enjoyPhrases?.length" class="font-body text-4xl mb-6">
       I enjoy...
       <br/>
-      <PhraseCarousel :phrases="enjoyPhrases" class="text-highlight font-italic font-medium" />
+      <PhraseCarousel :phrases="enjoyPhrases" class="text-highlight font-ad font-medium" />
     </p>
 
     <div class="grid sm:grid-cols-2 gap-8 items-center mb-12">

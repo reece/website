@@ -35,6 +35,9 @@ export default defineConfig({
     fontFamily: {
       display: '"Source Serif 4", Georgia, serif',
       body: '"Inter", system-ui, sans-serif',
+      ad: '"Architects Daughter", cursive',
+      chewy: '"Chewy", cursive',
+      ph: '"Patrick Hand", cursive',
     },
   },
   shortcuts: {
