@@ -18,7 +18,7 @@
     </div>
     
     <p v-if="enjoyPhrases?.length" class="font-body text-4xl mb-6">
-      I enjoy...
+      I like to...
       <br/>
       <PhraseCarousel :phrases="enjoyPhrases" class="text-highlight font-ad font-medium" />
     </p>
