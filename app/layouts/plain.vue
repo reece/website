@@ -1,6 +1,11 @@
 <template>
-  <div class="min-h-screen max-w-4xl mx-auto px-6 flex flex-col bg-paper dark:bg-neutral-950 text-ink dark:text-neutral-100 font-body">
-    <MaskImage name="brushes/thick-box-taper-1" color="var(--primary)" :height-scale="0.8" />
+  <div
+    class="min-h-screen max-w-4xl mx-auto px-6 flex flex-col bg-paper dark:bg-neutral-950 text-ink dark:text-neutral-100 font-body">
+
+    <div class="relative">
+      <MaskImage name="brushes/thick-box-taper-1" color="var(--primary)" :height-scale="0.8" />
+      <p class="absolute inset-0 pl-8 flex items-center font-display text-background text-3xl font-semibold tracking-tight">Reece Hart, PhD</p>
+    </div>
 
     <main class="flex-1 w-full px-6 py-10">
       <slot />

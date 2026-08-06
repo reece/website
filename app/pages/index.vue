@@ -1,27 +1,30 @@
 <template>
   <div class="font-body text-ink">
-    <h1 class="font-display text-3xl font-semibold tracking-tight mb-8">Reece Hart</h1>
 
     <h2 class="font-display text-4xl font-semibold tracking-tight mb-3">
-      Scientist. Engineer. Team Builder.
+      Scientist. Engineer. Community Builder. Collaborator. Problem Solver. Curious Mind.
     </h2>
+
+    <p v-if="enjoyPhrases?.length" class="font-body text-4xl mb-6">
+      I...
+      <PhraseCarousel :phrases="enjoyPhrases" class="text-highlight font-ad font-medium" />
+    </p>
+
     <p class="font-body text-xl opacity-75 mb-6">
       I build systems and tools that turn complex data into understanding and ideas into impact.
     </p>
 
-    <div class="grid sm:grid-cols-2 gap-8 items-center mb-12">
-      <div class="prose-container">
-        <ContentRenderer v-if="page" :value="page" />
-        <p v-else class="opacity-60">Coming soon.</p>
-      </div>
-      <NuxtImg src="/images/sf-from-marin.png" alt="San Francisco Bay seen from Marin" />
+    <div class="prose-container">
+      <ContentRenderer v-if="page" :value="page" />
+      <p v-else class="opacity-60">Coming soon.</p>
     </div>
-    
-    <p v-if="enjoyPhrases?.length" class="font-body text-4xl mb-6">
-      I like to...
-      <br/>
-      <PhraseCarousel :phrases="enjoyPhrases" class="text-highlight font-ad font-medium" />
-    </p>
+
+    <div class="rounded pointer-events-none" :style="{
+      backgroundImage: 'url(/images/sf-from-marin.png)',
+      backgroundSize: 'cover',
+      backgroundPosition: 'center',
+      opacity: '0.2',
+    }" />
 
     <section class="mb-12">
       <h2 class="font-display text-xl font-semibold mb-6">What I do</h2>
