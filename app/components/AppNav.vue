@@ -1,6 +1,5 @@
 <template>
   <header class="bg-paper">
-    <HeaderBrush />
     <nav class="max-w-3xl mx-auto w-full px-6 py-4 flex items-center justify-between">
       <NuxtLink to="/" class="font-display text-lg font-semibold tracking-tight text-ink hover:text-slate transition-colors">
         Reece Hart
@@ -42,7 +41,7 @@ function toggleColorMode() {
 
 const links = [
   { label: 'About', to: '/' },
-  { label: 'Blog', to: '/blog' },
+  { label: 'Blog', to: '/next/blog' },
   { label: 'Projects', to: '/next/projects' },
 ]
 </script>
