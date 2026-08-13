@@ -1,7 +1,7 @@
 <template>
   <div class="relative font-body text-ink">
-    <div class="fixed inset-0 z-0 pointer-events-none opacity-10">
-      <FadedImage src="/images/sf-from-marin.webp" alt="San Francisco Bay seen from Marin" />
+    <div class="fixed inset-0 z-0 pointer-events-none opacity-[0.15]">
+      <FadedImage src="/images/sf-from-marin.webp" alt="San Francisco Bay seen from Marin" position="75% 30%" />
     </div>
 
     <h2 class="font-display text-4xl font-semibold tracking-tight mb-3">

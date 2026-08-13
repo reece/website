@@ -1,6 +1,6 @@
 <template>
   <div class="relative w-full h-full rounded-xl overflow-hidden">
-    <NuxtImg :src="src" :alt="alt" class="w-full h-full object-cover" />
+    <NuxtImg :src="src" :alt="alt" class="w-full h-full object-cover" :style="{ objectPosition: position }" />
     <div v-if="faded" class="absolute inset-0 pointer-events-none" :style="fadeStyle" />
   </div>
 </template>
@@ -23,8 +23,11 @@ const props = withDefaults(defineProps<{
   alt: string
   /** Fade the image to the page background around its perimeter via an inset box-shadow. */
   faded?: boolean
+  /** CSS object-position value; biases which point of the image stays centered as object-cover crops to fill the box. */
+  position?: string
 }>(), {
   faded: false,
+  position: '50% 50%',
 })
 
 const fadeStyle = computed(() =>
