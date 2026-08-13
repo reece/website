@@ -1,5 +1,5 @@
 <template>
-  <div class="font-body text-ink">
+  <div class="font-body text-foreground">
     <div class="max-w-3xl mx-auto px-6 py-10 space-y-12">
       <header>
         <h1 class="font-display text-3xl font-semibold">

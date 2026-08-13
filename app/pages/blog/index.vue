@@ -1,5 +1,5 @@
 <template>
-  <div class="font-body text-ink">
+  <div class="font-body text-foreground">
     <h1 class="font-display text-3xl font-semibold tracking-tight mb-2">Writing</h1>
     <p class="text-sm opacity-75 mb-8">
       Notes, essays, and ideas on engineering, data, and making a positive impact.
@@ -8,7 +8,7 @@
     <div v-if="tags.length" class="flex gap-4 overflow-x-auto pb-2 mb-8 text-sm font-medium">
       <button
         class="whitespace-nowrap transition-opacity"
-        :class="activeTag === null ? 'opacity-100 text-slate' : 'opacity-60 hover:opacity-100'"
+        :class="activeTag === null ? 'opacity-100 text-accent' : 'opacity-60 hover:opacity-100'"
         @click="activeTag = null"
       >
         All
@@ -17,7 +17,7 @@
         v-for="tag in tags"
         :key="tag"
         class="whitespace-nowrap transition-opacity"
-        :class="activeTag === tag ? 'opacity-100 text-slate' : 'opacity-60 hover:opacity-100'"
+        :class="activeTag === tag ? 'opacity-100 text-accent' : 'opacity-60 hover:opacity-100'"
         @click="activeTag = tag"
       >
         {{ tag }}
@@ -29,7 +29,7 @@
         <ThinPenLine v-if="index > 0" class="mb-8" />
         <NuxtLink :to="post.path" class="group block">
           <time class="text-xs uppercase tracking-wide opacity-50">{{ formatDate(post.date) }}</time>
-          <h2 class="font-display text-lg font-semibold group-hover:text-slate transition-colors mt-0.5">
+          <h2 class="font-display text-lg font-semibold group-hover:text-accent transition-colors mt-0.5">
             {{ post.title }}
           </h2>
           <p v-if="post.description" class="text-sm opacity-75 mt-1">

@@ -1,4 +1,5 @@
 :root {
+  /* Primitives: fixed color identity, never redefined per mode. */
   --paper: #FAF8F5;
   --linen: #EFEAE1;
   --sand: #E5E1D6;
@@ -8,6 +9,17 @@
   --rust: #BC5324;
   --gold: #B8860B;
 
+  /* Dark-mode-only primitives. */
+  --charcoal: #0A0A0A;
+  --smoke: #171717;
+  --graphite: #262626;
+  --bone: #F5F5F5;
+  --slate-light: #7FA8C9;
+  --forest-light: #9CB39F;
+  --rust-light: #E08355;
+  --gold-light: #E0B03D;
+
+  /* Semantic: the interface components use; aliases a primitive per mode. */
   --background: var(--paper);
   --foreground: var(--ink);
   --border: var(--sand);
@@ -17,6 +29,18 @@
   --secondary: var(--forest);
   --subheadings: var(--forest);
   --highlight: var(--rust);
+}
+
+.dark {
+  --background: var(--charcoal);
+  --foreground: var(--bone);
+  --border: var(--graphite);
+  --primary: var(--slate-light);
+  --headings: var(--slate-light);
+  --accent: var(--slate-light);
+  --secondary: var(--forest-light);
+  --subheadings: var(--forest-light);
+  --highlight: var(--rust-light);
 }
 
 .dev {

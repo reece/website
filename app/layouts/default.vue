@@ -1,6 +1,6 @@
 <template>
   <div
-    class="min-h-screen mx-auto px-6 flex flex-col bg-paper dark:bg-neutral-950 text-ink dark:text-neutral-100 font-body">
+    class="min-h-screen mx-auto px-6 flex flex-col bg-background text-foreground font-body">
 
     <AppHeader />
 

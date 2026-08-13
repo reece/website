@@ -1,5 +1,5 @@
 <template>
-  <article v-if="post" class="font-body text-ink">
+  <article v-if="post" class="font-body text-foreground">
     <header class="mb-8">
       <time class="text-xs uppercase tracking-wide opacity-50">{{ formatDate(post.date) }}</time>
       <h1 class="mt-1 mb-3">
@@ -29,7 +29,7 @@
         <p class="text-xs uppercase tracking-wide opacity-50 mb-2">On this page</p>
         <ul class="space-y-2 text-sm sticky top-6">
           <li v-for="item in toc" :key="item.id">
-            <a :href="`#${item.id}`" class="opacity-75 hover:opacity-100 hover:text-slate transition-colors">{{ item.text }}</a>
+            <a :href="`#${item.id}`" class="opacity-75 hover:opacity-100 hover:text-accent transition-colors">{{ item.text }}</a>
           </li>
         </ul>
       </nav>

@@ -1,6 +1,6 @@
 <template>
-  <div class="relative font-body text-ink">
-    <div class="fixed inset-0 z-0 pointer-events-none opacity-[0.15]">
+  <div class="relative font-body text-foreground">
+    <div class="fixed inset-0 z-0 pointer-events-none opacity-[0.15] dark:opacity-[0.08]">
       <FadedImage src="/images/sf-from-marin.webp" alt="San Francisco Bay seen from Marin" position="75% 30%" />
     </div>
 
@@ -35,7 +35,7 @@
           <ThinPenLine v-if="index > 0" class="mb-5" />
           <NuxtLink :to="post.path" class="group block">
             <time class="text-xs uppercase tracking-wide opacity-50">{{ formatDate(post.date) }}</time>
-            <h3 class="font-display text-base font-medium group-hover:text-slate transition-colors mt-0.5">
+            <h3 class="font-display text-base font-medium group-hover:text-accent transition-colors mt-0.5">
               {{ post.title }}
             </h3>
             <p v-if="post.description" class="font-body text-sm opacity-75 mt-1">
@@ -44,7 +44,7 @@
           </NuxtLink>
         </li>
       </ul>
-      <NuxtLink to="/blog" class="inline-block mt-6 font-body text-sm text-slate hover:opacity-75 transition-opacity">
+      <NuxtLink to="/blog" class="inline-block mt-6 font-body text-sm text-accent hover:opacity-75 transition-opacity">
         All posts →
       </NuxtLink>
     </section>
@@ -57,11 +57,11 @@
       <ul class="space-y-2 text-sm">
         <li>
           Email: <a href="mailto:reece@reecehart.com"
-            class="text-slate hover:opacity-75 transition-opacity">reece@reecehart.com</a>
+            class="text-accent hover:opacity-75 transition-opacity">reece@reecehart.com</a>
         </li>
         <li>
           GitHub: <a href="https://github.com/reece" target="_blank" rel="noopener noreferrer"
-            class="text-slate hover:opacity-75 transition-opacity">github.com/reece</a>
+            class="text-accent hover:opacity-75 transition-opacity">github.com/reece</a>
         </li>
       </ul>
     </section>
