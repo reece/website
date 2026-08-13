@@ -14,11 +14,6 @@
       I build systems and tools that turn complex data into understanding and ideas into impact.
     </p>
 
-    <div class="prose-container">
-      <ContentRenderer v-if="page" :value="page" />
-      <p v-else class="opacity-60">Coming soon.</p>
-    </div>
-
     <div class="rounded pointer-events-none" :style="{
       backgroundImage: 'url(/images/sf-from-marin.png)',
       backgroundSize: 'cover',
@@ -86,9 +81,6 @@ function formatDate(date: string) {
   return new Date(date).toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })
 }
 
-const { data: page } = await useAsyncData('about', () =>
-  queryCollection('pages').path('/pages/about').first(),
-)
 const { data: posts } = await useAsyncData('home-posts', () =>
   queryCollection('blog')
     .order('date', 'DESC')
