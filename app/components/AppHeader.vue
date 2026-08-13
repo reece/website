@@ -25,8 +25,8 @@
               class="opacity-75 hover:opacity-100 transition-opacity"
               @click="toggleColorMode"
             >
-              <span v-if="colorMode.value === 'dark'" class="i-ph-sun block">X</span>
-              <span v-else class="i-ph-moon block">X</span>
+              <span v-if="colorMode.value === 'dark'" class="i-ph-sun block translate-y-[0.1em]" />
+              <span v-else class="i-ph-moon block translate-y-[0.1em]" />
             </button>
           </li>
         </ul>
