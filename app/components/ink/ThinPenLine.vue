@@ -17,7 +17,7 @@
  * Thin, lightly wavy hand-drawn rule for subtle divider use (finer weight than InkRule).
  *
  * @example
- * <ThinPenLine color="var(--slate)" />
+ * <ThinPenLine color="var(--accent)" />
  */
 withDefaults(defineProps<{
   /** CSS color for the line stroke; accepts any valid CSS color value or var(). */

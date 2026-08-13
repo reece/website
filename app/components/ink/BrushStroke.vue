@@ -56,7 +56,7 @@ const props = withDefaults(defineProps<{
   /** Mirror the stroke vertically. */
   flip?: boolean
 }>(), {
-  color: 'var(--slate)',
+  color: 'var(--accent)',
   flip: false,
 })
 

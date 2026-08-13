@@ -22,6 +22,6 @@ withDefaults(defineProps<{
   /** CSS color for the brush fill; accepts any valid CSS color value or var(). */
   color?: string
 }>(), {
-  color: 'var(--slate)',
+  color: 'var(--accent)',
 })
 </script>

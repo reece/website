@@ -96,16 +96,16 @@
             <h3 class="font-display text-lg font-semibold mb-3">Brush Image</h3>
             <div class="space-y-4">
               <div>
-                <MaskImage name="brushes/thick-taper-1" color="var(--slate)" />
-                <code class="text-xs opacity-60">&lt;MaskImage name="brushes/thick-taper-1" color="var(--slate)" /&gt;</code>
+                <MaskImage name="brushes/thick-taper-1" color="var(--slate-dark)" />
+                <code class="text-xs opacity-60">&lt;MaskImage name="brushes/thick-taper-1" color="var(--slate-dark)" /&gt;</code>
               </div>
               <div>
-                <MaskImage name="brushes/thick-box-taper-1" color="var(--forest)" flip="horizontal" />
-                <code class="text-xs opacity-60">&lt;MaskImage name="brushes/thick-box-taper-1" color="var(--forest)" flip="horizontal" /&gt;</code>
+                <MaskImage name="brushes/thick-box-taper-1" color="var(--forest-dark)" flip="horizontal" />
+                <code class="text-xs opacity-60">&lt;MaskImage name="brushes/thick-box-taper-1" color="var(--forest-dark)" flip="horizontal" /&gt;</code>
               </div>
               <div>
-                <MaskImage name="brushes/medium-taper-1" color="var(--rust)" :height-scale="0.5" />
-                <code class="text-xs opacity-60">&lt;MaskImage name="brushes/medium-taper-1" color="var(--rust)" :height-scale="0.5" /&gt;</code>
+                <MaskImage name="brushes/medium-taper-1" color="var(--rust-dark)" :height-scale="0.5" />
+                <code class="text-xs opacity-60">&lt;MaskImage name="brushes/medium-taper-1" color="var(--rust-dark)" :height-scale="0.5" /&gt;</code>
               </div>
               <div>
                 <MaskImage name="brushes/medium-taper-2" color="var(--ink)" />
@@ -146,24 +146,24 @@
             <h3 class="font-display text-lg font-semibold mb-3">Line Image</h3>
             <div class="space-y-4">
               <div>
-                <MaskImage name="lines/thin" color="var(--slate)" />
-                <code class="text-xs opacity-60">&lt;MaskImage name="lines/thin" color="var(--slate)" /&gt;</code>
+                <MaskImage name="lines/thin" color="var(--slate-dark)" />
+                <code class="text-xs opacity-60">&lt;MaskImage name="lines/thin" color="var(--slate-dark)" /&gt;</code>
               </div>
               <div>
-                <MaskImage name="lines/medium" color="var(--forest)" />
-                <code class="text-xs opacity-60">&lt;MaskImage name="lines/medium" color="var(--forest)" /&gt;</code>
+                <MaskImage name="lines/medium" color="var(--forest-dark)" />
+                <code class="text-xs opacity-60">&lt;MaskImage name="lines/medium" color="var(--forest-dark)" /&gt;</code>
               </div>
               <div>
-                <MaskImage name="lines/thick" color="var(--rust)" />
-                <code class="text-xs opacity-60">&lt;MaskImage name="lines/thick" color="var(--rust)" /&gt;</code>
+                <MaskImage name="lines/thick" color="var(--rust-dark)" />
+                <code class="text-xs opacity-60">&lt;MaskImage name="lines/thick" color="var(--rust-dark)" /&gt;</code>
               </div>
               <div>
                 <MaskImage name="lines/dotted" color="var(--ink)" />
                 <code class="text-xs opacity-60">&lt;MaskImage name="lines/dotted" color="var(--ink)" /&gt;</code>
               </div>
               <div>
-                <MaskImage name="lines/wavy" color="var(--slate)" />
-                <code class="text-xs opacity-60">&lt;MaskImage name="lines/wavy" color="var(--slate)" /&gt;</code>
+                <MaskImage name="lines/wavy" color="var(--slate-dark)" />
+                <code class="text-xs opacity-60">&lt;MaskImage name="lines/wavy" color="var(--slate-dark)" /&gt;</code>
               </div>
             </div>
           </div>
@@ -171,24 +171,24 @@
             <h3 class="font-display text-lg font-semibold mb-3">Ink Rule</h3>
             <div class="space-y-4">
               <div>
-                <InkRule variant="fine" color="var(--slate)" />
-                <code class="text-xs opacity-60">&lt;InkRule variant="fine" color="var(--slate)" /&gt;</code>
+                <InkRule variant="fine" color="var(--slate-dark)" />
+                <code class="text-xs opacity-60">&lt;InkRule variant="fine" color="var(--slate-dark)" /&gt;</code>
               </div>
               <div>
-                <InkRule variant="organic" color="var(--forest)" />
-                <code class="text-xs opacity-60">&lt;InkRule variant="organic" color="var(--forest)" /&gt;</code>
+                <InkRule variant="organic" color="var(--forest-dark)" />
+                <code class="text-xs opacity-60">&lt;InkRule variant="organic" color="var(--forest-dark)" /&gt;</code>
               </div>
               <div>
-                <InkRule variant="brush" color="var(--rust)" />
-                <code class="text-xs opacity-60">&lt;InkRule variant="brush" color="var(--rust)" /&gt;</code>
+                <InkRule variant="brush" color="var(--rust-dark)" />
+                <code class="text-xs opacity-60">&lt;InkRule variant="brush" color="var(--rust-dark)" /&gt;</code>
               </div>
               <div>
                 <InkRule variant="dotted" color="var(--ink)" />
                 <code class="text-xs opacity-60">&lt;InkRule variant="dotted" color="var(--ink)" /&gt;</code>
               </div>
               <div>
-                <InkRule variant="squiggle" color="var(--slate)" />
-                <code class="text-xs opacity-60">&lt;InkRule variant="squiggle" color="var(--slate)" /&gt;</code>
+                <InkRule variant="squiggle" color="var(--slate-dark)" />
+                <code class="text-xs opacity-60">&lt;InkRule variant="squiggle" color="var(--slate-dark)" /&gt;</code>
               </div>
             </div>
           </div>
@@ -200,11 +200,11 @@
         <div class="space-y-6">
           <div>
             <p class="text-xs uppercase tracking-wide opacity-60 mb-1">Marker underline — for links and highlights</p>
-            <MarkerUnderline color="var(--slate)">
+            <MarkerUnderline color="var(--slate-dark)">
               <span class="font-display text-lg">Sample link text</span>
             </MarkerUnderline>
             <div class="mt-2">
-              <code class="text-xs opacity-60">&lt;MarkerUnderline color="var(--slate)"&gt;Sample link text&lt;/MarkerUnderline&gt;</code>
+              <code class="text-xs opacity-60">&lt;MarkerUnderline color="var(--slate-dark)"&gt;Sample link text&lt;/MarkerUnderline&gt;</code>
             </div>
           </div>
         </div>
@@ -295,9 +295,9 @@ const tiers = [
     name: 'dark',
     swatches: [
       { name: 'ink', value: 'var(--ink)', textOn: 'var(--paper)', hex: '#52504A' },
-      { name: 'slate', value: 'var(--slate)', textOn: 'var(--paper)', hex: '#365C7A' },
-      { name: 'forest', value: 'var(--forest)', textOn: 'var(--paper)', hex: '#6A7C6E' },
-      { name: 'rust', value: 'var(--rust)', textOn: 'var(--paper)', hex: '#BC5324' },
+      { name: 'slate-dark', value: 'var(--slate-dark)', textOn: 'var(--paper)', hex: '#365C7A' },
+      { name: 'forest-dark', value: 'var(--forest-dark)', textOn: 'var(--paper)', hex: '#6A7C6E' },
+      { name: 'rust-dark', value: 'var(--rust-dark)', textOn: 'var(--paper)', hex: '#BC5324' },
     ],
   },
 ]
@@ -312,10 +312,10 @@ const colors = [
   { name: 'linen', value: 'var(--linen)', textOn: 'var(--ink)', seed: 2, roles: [], uses: 'Unassigned.', hex: '#EFEAE1', oklch: 'oklch(93.8% 0.0132 82.4)' },
   { name: 'sand', value: 'var(--sand)', textOn: 'var(--ink)', seed: 3, roles: ['border'], uses: 'Dividers and box borders (e.g. mobile TOC).', hex: '#E5E1D6', oklch: 'oklch(91.0% 0.0154 90.2)' },
   { name: 'ink', value: 'var(--ink)', textOn: 'var(--paper)', seed: 4, roles: ['foreground'], uses: 'Primary body text.', hex: '#52504A', oklch: 'oklch(43.1% 0.0100 91.6)' },
-  { name: 'slate', value: 'var(--slate)', textOn: 'var(--paper)', seed: 5, roles: ['primary', 'headings', 'accent'], uses: 'Links, hover states, active nav/tag — the main interactive color.', hex: '#365C7A', oklch: 'oklch(46.0% 0.0656 243.7)' },
-  { name: 'forest', value: 'var(--forest)', textOn: 'var(--paper)', seed: 6, roles: ['secondary', 'subheadings'], uses: 'Reserved for a secondary accent (not yet used).', hex: '#6A7C6E', oklch: 'oklch(56.7% 0.0301 152.0)' },
-  { name: 'rust', value: 'var(--rust)', textOn: 'var(--paper)', seed: 7, roles: ['highlight'], uses: 'Reserved for visual emphasis/pop (not yet used).', hex: '#BC5324', oklch: 'oklch(56.9% 0.1479 42.3)' },
-  { name: 'gold', value: 'var(--gold)', textOn: 'var(--paper)', seed: 8, roles: [], uses: 'Unassigned.', hex: '#B8860B', oklch: 'oklch(65.2% 0.1322 81.6)' },
+  { name: 'slate-dark', value: 'var(--slate-dark)', textOn: 'var(--paper)', seed: 5, roles: ['primary', 'headings', 'accent'], uses: 'Links, hover states, active nav/tag — the main interactive color.', hex: '#365C7A', oklch: 'oklch(46.0% 0.0656 243.7)' },
+  { name: 'forest-dark', value: 'var(--forest-dark)', textOn: 'var(--paper)', seed: 6, roles: ['secondary', 'subheadings'], uses: 'Reserved for a secondary accent (not yet used).', hex: '#6A7C6E', oklch: 'oklch(56.7% 0.0301 152.0)' },
+  { name: 'rust-dark', value: 'var(--rust-dark)', textOn: 'var(--paper)', seed: 7, roles: ['highlight'], uses: 'Reserved for visual emphasis/pop (not yet used).', hex: '#BC5324', oklch: 'oklch(56.9% 0.1479 42.3)' },
+  { name: 'gold-dark', value: 'var(--gold-dark)', textOn: 'var(--paper)', seed: 8, roles: [], uses: 'Unassigned.', hex: '#B8860B', oklch: 'oklch(65.2% 0.1322 81.6)' },
 ]
 
 const rolePriority = ['background', 'border', 'foreground', 'primary', 'secondary', 'highlight']

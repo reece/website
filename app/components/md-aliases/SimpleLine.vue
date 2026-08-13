@@ -1,5 +1,5 @@
 <template>
-  <MaskImage name="lines/thin" color="var(--slate)" />
+  <MaskImage name="lines/thin" color="var(--accent)" />
 </template>
 
 <script setup lang="ts">

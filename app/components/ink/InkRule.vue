@@ -4,7 +4,7 @@
  * sections without a plain HTML `<hr>`.
  *
  * @example
- * <InkRule variant="organic" color="var(--slate)" />
+ * <InkRule variant="organic" color="var(--accent)" />
  *
  * @example Dotted variant
  * <InkRule variant="dotted" width="60%" />

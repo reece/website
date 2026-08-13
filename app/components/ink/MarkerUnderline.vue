@@ -32,7 +32,7 @@ withDefaults(defineProps<{
   /** CSS color for the underline stroke; accepts any valid CSS color value or var(). */
   color?: string
 }>(), {
-  color: 'var(--slate)',
+  color: 'var(--accent)',
 })
 
 defineSlots<{

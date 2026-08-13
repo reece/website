@@ -4,10 +4,10 @@
   --linen: #EFEAE1;
   --sand: #E5E1D6;
   --ink: #52504A;
-  --slate: #365C7A;
-  --forest: #6A7C6E;
-  --rust: #BC5324;
-  --gold: #B8860B;
+  --slate-dark: #365C7A;
+  --forest-dark: #6A7C6E;
+  --rust-dark: #BC5324;
+  --gold-dark: #B8860B;
 
   /* Dark-mode-only primitives. */
   --charcoal: #0A0A0A;
@@ -23,12 +23,12 @@
   --background: var(--paper);
   --foreground: var(--ink);
   --border: var(--sand);
-  --primary: var(--slate);
-  --headings: var(--slate);
-  --accent: var(--slate);
-  --secondary: var(--forest);
-  --subheadings: var(--forest);
-  --highlight: var(--rust);
+  --primary: var(--slate-dark);
+  --headings: var(--slate-dark);
+  --accent: var(--slate-dark);
+  --secondary: var(--forest-dark);
+  --subheadings: var(--forest-dark);
+  --highlight: var(--rust-dark);
 }
 
 .dark {
@@ -44,5 +44,5 @@
 }
 
 .dev {
-  outline: 1px dashed var(--forest);
+  outline: 1px dashed var(--forest-dark);
 }

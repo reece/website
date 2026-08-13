@@ -3,7 +3,7 @@
     <header class="mb-8">
       <time class="text-xs uppercase tracking-wide opacity-50">{{ formatDate(post.date) }}</time>
       <h1 class="mt-1 mb-3">
-        <MarkerUnderline color="var(--slate)">
+        <MarkerUnderline color="var(--accent)">
           <span class="font-display text-3xl font-semibold tracking-tight">{{ post.title }}</span>
         </MarkerUnderline>
       </h1>
