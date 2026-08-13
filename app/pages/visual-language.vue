@@ -41,47 +41,30 @@
             </tr>
           </tbody>
         </table>
-      </section>
 
-      <section>
-        <h2 class="font-display text-xl font-semibold mb-4">Text and Headings</h2>
-        <div class="mt-8 space-y-4">
-          <div class="bg-background border border-border rounded p-4">
-            <p class="text-xs uppercase tracking-wide opacity-60 mb-2">
-              <code>bg-background</code> + <code>border-border</code>
-            </p>
-            <p class="text-foreground">
-              A card using <code>bg-background</code> for its fill, <code>border-border</code> for its edge, and
-              <code>text-foreground</code> (below) for body copy.
-            </p>
-          </div>
-
-          <p>
-            <code>text-headings</code> for a heading:
-            <span class="block font-display text-xl font-semibold text-headings">A Sample Heading</span>
+        <div class="bg-background border border-border rounded p-4 m-8">
+          <p class="text-xs uppercase tracking-wide opacity-60 mb-2">
+            <code>bg-background</code> + <code>border-border</code>
           </p>
-
           <p class="text-foreground">
-            <code>text-primary</code> / <code>text-accent</code> for a
-            <a href="#" class="text-accent hover:opacity-75 transition-opacity">link like this one</a>.
-          </p>
-
-          <p class="text-foreground">
-            <code>text-secondary</code> for de-emphasized supporting text, such as a
-            <span class="text-secondary">figure caption</span> or metadata line.
-          </p>
-
-          <p class="text-foreground">
-            <code>text-highlight</code> reserved for a
-            <span class="text-highlight font-medium">standout callout</span> when something needs real visual pop.
+            A card using <code>bg-background</code> for its fill, <code>border-border</code> for its edge, and
+            <code>text-foreground</code> (below) for body copy.
           </p>
         </div>
       </section>
 
       <section>
-        <h2 class="font-display text-xl font-semibold mb-4">Typography</h2>
-        <p class="font-display text-3xl">Aa — Headings: Source Serif 4</p>
+        <h2 class="font-display text-xl font-semibold mb-4">Typography, Text, and Headings</h2>
+        <p class="font-display text-xl">Aa — Headings: Source Serif 4</p>
         <p class="font-body text-lg mt-2">Aa — Body: Inter</p>
+
+        <h3 class="font-display text-xl font-semibold mt-4 mb-4">Text and Headings</h3>
+        <div class="bg-background border border-border rounded p-4 m-8">
+          <h1>This is heading 1</h1>
+          <h2>This is heading 2</h2>
+          <h3>This is heading 3</h3>
+          <h4>This is heading 4</h4>
+        </div>
       </section>
 
       <section>
@@ -115,7 +98,8 @@
               </div>
               <div>
                 <MaskImage name="brushes/medium-taper-2" color="var(--ink)" />
-                <code class="text-xs opacity-60">&lt;MaskImage name="brushes/medium-taper-2" color="var(--ink)" /&gt;</code>
+                <code
+                  class="text-xs opacity-60">&lt;MaskImage name="brushes/medium-taper-2" color="var(--ink)" /&gt;</code>
               </div>
             </div>
           </div>
@@ -157,7 +141,8 @@
               </div>
               <div>
                 <MaskImage name="lines/medium" color="var(--forest-dark)" />
-                <code class="text-xs opacity-60">&lt;MaskImage name="lines/medium" color="var(--forest-dark)" /&gt;</code>
+                <code
+                  class="text-xs opacity-60">&lt;MaskImage name="lines/medium" color="var(--forest-dark)" /&gt;</code>
               </div>
               <div>
                 <MaskImage name="lines/thick" color="var(--rust-dark)" />
