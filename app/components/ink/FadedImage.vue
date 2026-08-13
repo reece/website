@@ -12,7 +12,7 @@
  * a hard-edged rectangle.
  *
  * @example
- * <FadedImage src="/images/sf-from-marin.png" alt="San Francisco Bay seen from Marin" faded />
+ * <FadedImage src="/images/sf-from-marin.webp" alt="San Francisco Bay seen from Marin" faded />
  */
 import { computed } from 'vue'
 

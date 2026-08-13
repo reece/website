@@ -1,5 +1,8 @@
 <template>
-  <div class="font-body text-ink">
+  <div class="relative font-body text-ink">
+    <div class="fixed inset-0 z-0 pointer-events-none opacity-10">
+      <FadedImage src="/images/sf-from-marin.webp" alt="San Francisco Bay seen from Marin" />
+    </div>
 
     <h2 class="font-display text-4xl font-semibold tracking-tight mb-3">
       Scientist. Engineer. Community Builder. Collaborator. Problem Solver. Curious Mind.
@@ -13,13 +16,6 @@
     <p class="font-body text-xl opacity-75 mb-6">
       I build systems and tools that turn complex data into understanding and ideas into impact.
     </p>
-
-    <div class="rounded pointer-events-none" :style="{
-      backgroundImage: 'url(/images/sf-from-marin.png)',
-      backgroundSize: 'cover',
-      backgroundPosition: 'center',
-      opacity: '0.2',
-    }" />
 
     <section class="mb-12">
       <h2 class="font-display text-xl font-semibold mb-6">What I do</h2>
