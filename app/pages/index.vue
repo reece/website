@@ -31,9 +31,8 @@
       </div>
     </section>
 
-    <InkRule variant="fine" color="var(--highlight)" class="mb-12" />
 
-    <section v-if="posts?.length" class="py-8">
+    <section v-if="isDev && posts?.length" class="py-8" :class="{ dev: isDev }">
       <h2 class="font-display text-xl font-semibold mb-6">Recent thoughts</h2>
       <ul class="space-y-5">
         <li v-for="(post, index) in posts" :key="post.path">
@@ -54,6 +53,7 @@
       </NuxtLink>
     </section>
 
+    <InkRule variant="fine" color="var(--highlight)" class="mb-12" />
 
     <section>
       <h2 class="font-display text-xl font-semibold mb-4">Contact</h2>
@@ -76,6 +76,8 @@
 definePageMeta({ layout: 'plain' })
 
 useSeoMeta({ title: 'About · Reece Hart' })
+
+const isDev = import.meta.dev
 
 function formatDate(date: string) {
   return new Date(date).toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })

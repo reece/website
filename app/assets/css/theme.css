@@ -18,3 +18,7 @@
   --subheadings: var(--forest);
   --highlight: var(--rust);
 }
+
+.dev {
+  outline: 1px dashed var(--forest);
+}
