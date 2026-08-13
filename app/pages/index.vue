@@ -73,7 +73,7 @@
 </template>
 
 <script setup lang="ts">
-definePageMeta({ layout: 'plain' })
+definePageMeta({ layout: 'default' })
 
 useSeoMeta({ title: 'About · Reece Hart' })
 

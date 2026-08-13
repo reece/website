@@ -64,8 +64,10 @@ const props = withDefaults(defineProps<{
   color?: string
   /** Mirror the texture horizontally, vertically, both, or not at all. */
   flip?: 'none' | 'horizontal' | 'vertical' | 'both'
-  /** Multiplier applied to the texture's native height (and thus its aspect ratio). */
+  /** Multiplier applied to the texture's native height (and thus its aspect ratio). Ignored if height is set. */
   heightScale?: number
+  /** Raw CSS height override (e.g. a clamp() expression) for responsive sizing. Overrides heightScale; aspect-ratio doesn't support clamp()/calc(), so this sets height directly instead. */
+  height?: string
 }>(), {
   color: 'currentColor',
   flip: 'none',
@@ -82,8 +84,10 @@ const TRANSFORMS = {
 // Built as a string, not an object: happy-dom's CSSOM drops mask-image on object-form :style bindings, which would break the tests (no real-browser impact).
 const style = computed(() => {
   const url = IMAGE_URLS[props.name]
-  const parts = [
-    `aspect-ratio: ${IMAGE_ASPECT_RATIOS[props.name] / props.heightScale}`,
+  const parts = props.height
+    ? [`height: ${props.height}`]
+    : [`aspect-ratio: ${IMAGE_ASPECT_RATIOS[props.name] / props.heightScale}`]
+  parts.push(
     `background-color: ${props.color}`,
     `mask-image: url(${url})`,
     `-webkit-mask-image: url(${url})`,
@@ -91,7 +95,7 @@ const style = computed(() => {
     `-webkit-mask-size: 100% 100%`,
     `mask-repeat: no-repeat`,
     `-webkit-mask-repeat: no-repeat`,
-  ]
+  )
   const transform = TRANSFORMS[props.flip]
   if (transform) parts.push(`transform: ${transform}`)
   return parts.join('; ')
