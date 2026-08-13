@@ -41,7 +41,10 @@
             </tr>
           </tbody>
         </table>
+      </section>
 
+      <section>
+        <h2 class="font-display text-xl font-semibold mb-4">Text and Headings</h2>
         <div class="mt-8 space-y-4">
           <div class="bg-background border border-border rounded p-4">
             <p class="text-xs uppercase tracking-wide opacity-60 mb-2">
@@ -97,15 +100,18 @@
             <div class="space-y-4">
               <div>
                 <MaskImage name="brushes/thick-taper-1" color="var(--slate-dark)" />
-                <code class="text-xs opacity-60">&lt;MaskImage name="brushes/thick-taper-1" color="var(--slate-dark)" /&gt;</code>
+                <code
+                  class="text-xs opacity-60">&lt;MaskImage name="brushes/thick-taper-1" color="var(--slate-dark)" /&gt;</code>
               </div>
               <div>
                 <MaskImage name="brushes/thick-box-taper-1" color="var(--forest-dark)" flip="horizontal" />
-                <code class="text-xs opacity-60">&lt;MaskImage name="brushes/thick-box-taper-1" color="var(--forest-dark)" flip="horizontal" /&gt;</code>
+                <code
+                  class="text-xs opacity-60">&lt;MaskImage name="brushes/thick-box-taper-1" color="var(--forest-dark)" flip="horizontal" /&gt;</code>
               </div>
               <div>
                 <MaskImage name="brushes/medium-taper-1" color="var(--rust-dark)" :height-scale="0.5" />
-                <code class="text-xs opacity-60">&lt;MaskImage name="brushes/medium-taper-1" color="var(--rust-dark)" :height-scale="0.5" /&gt;</code>
+                <code
+                  class="text-xs opacity-60">&lt;MaskImage name="brushes/medium-taper-1" color="var(--rust-dark)" :height-scale="0.5" /&gt;</code>
               </div>
               <div>
                 <MaskImage name="brushes/medium-taper-2" color="var(--ink)" />
@@ -204,7 +210,8 @@
               <span class="font-display text-lg">Sample link text</span>
             </MarkerUnderline>
             <div class="mt-2">
-              <code class="text-xs opacity-60">&lt;MarkerUnderline color="var(--slate-dark)"&gt;Sample link text&lt;/MarkerUnderline&gt;</code>
+              <code
+                class="text-xs opacity-60">&lt;MarkerUnderline color="var(--slate-dark)"&gt;Sample link text&lt;/MarkerUnderline&gt;</code>
             </div>
           </div>
         </div>
@@ -266,7 +273,8 @@
       <section>
         <h2 class="font-display text-xl font-semibold mb-4">Illustration placeholder</h2>
         <SketchPlaceholder label="Sample illustration placeholder" class="max-w-sm" />
-        <code class="text-xs opacity-60 mt-2 block">&lt;SketchPlaceholder label="Sample illustration placeholder" /&gt;</code>
+        <code
+          class="text-xs opacity-60 mt-2 block">&lt;SketchPlaceholder label="Sample illustration placeholder" /&gt;</code>
       </section>
     </div>
 
