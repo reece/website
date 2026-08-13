@@ -4,31 +4,24 @@
       <FadedImage src="/images/sf-from-marin.webp" alt="San Francisco Bay seen from Marin" position="75% 30%" />
     </div>
 
-    <h2 class="font-display text-4xl font-semibold tracking-tight mb-3">
-      Scientist. Engineer. Community Builder. Collaborator. Problem Solver. Curious Mind.
+    <h2 class="font-display text-xl font-semibold tracking-tight mb-3">
+      Engineering leader. Computational biologist. Do-gooder.
     </h2>
 
-    <p v-if="enjoyPhrases?.length" class="font-body text-4xl mb-6">
+    <p v-if="enjoyPhrases?.length" class="font-ad text-2xl mb-6">
       I...
       <PhraseCarousel :phrases="enjoyPhrases" class="text-highlight font-ad font-medium" />
     </p>
 
-    <p class="font-body text-xl opacity-75 mb-6">
-      I build systems and tools that turn complex data into understanding and ideas into impact.
+    <p>
+      I am a scientist, engineering leader, and software developer. I have a PhD in molecular biophysics, a master's
+      degree in computer science, and over two decades of experience building reliable software systems for research,
+      healthcare, and business. I enjoy solving complex problems, collaborating with smart people, and building products
+      that matter to human beings and the planet. <NuxtLink to="/about"
+        class="text-accent hover:opacity-75 transition-opacity">More...</NuxtLink>
     </p>
 
-    <section class="mb-12">
-      <h2 class="font-display text-xl font-semibold mb-6">What I do</h2>
-      <div class="grid sm:grid-cols-3 gap-6">
-        <div v-for="item in whatIDo" :key="item.title">
-          <h3 class="font-display font-medium mb-1">{{ item.title }}</h3>
-          <p class="text-sm opacity-75">{{ item.body }}</p>
-        </div>
-      </div>
-    </section>
-
-
-    <section v-if="isDev && posts?.length" class="py-8" :class="{ dev: isDev }">
+    <section v-if="isDev && posts?.length" class="mt-8" :class="{ dev: isDev }">
       <h2 class="font-display text-xl font-semibold mb-6">Recent thoughts</h2>
       <ul class="space-y-5">
         <li v-for="(post, index) in posts" :key="post.path">

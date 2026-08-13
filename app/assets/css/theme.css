@@ -55,7 +55,7 @@
 }
 
 .dev {
-  outline: 1px dashed var(--forest-dark);
+  border: 1px dashed var(--rust-dark);
 }
 
 p + p {
