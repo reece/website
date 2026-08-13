@@ -1,26 +1,5 @@
 <template>
   <div>
-    <section class="py-12">
-      <h1 class="font-display text-4xl font-semibold tracking-tight mb-3">
-        Engineer. Scientist. Builder.
-      </h1>
-      <p class="font-body text-xl opacity-75 mb-6">
-        I build systems and tools that turn complex data into understanding and ideas into impact.
-      </p>
-      <div class="mt-8 flex flex-wrap gap-4">
-        <MarkerUnderline color="var(--slate)">
-          <NuxtLink to="/" class="font-body text-sm font-medium">
-            About me →
-          </NuxtLink>
-        </MarkerUnderline>
-        <MarkerUnderline color="var(--slate)">
-          <NuxtLink to="/blog" class="font-body text-sm font-medium">
-            Read the writing →
-          </NuxtLink>
-        </MarkerUnderline>
-      </div>
-    </section>
-
     <section v-if="posts?.length" class="py-8">
       <h2 class="font-display text-xl font-semibold mb-6">Recent thoughts</h2>
       <ul class="space-y-5">
