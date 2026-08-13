@@ -1,5 +1,5 @@
 :root {
-  /* Primitives: fixed color identity, never redefined per mode. */
+  /* Primitives: fixed color identity, never redefined per mode and never used directly. */
   --paper: #FAF8F5;
   --linen: #EFEAE1;
   --sand: #E5E1D6;
@@ -19,6 +19,13 @@
   --rust-light: #E08355;
   --gold-light: #E0B03D;
 
+  /* Fonts: single source of truth, referenced from uno.config.ts's fontFamily too. */
+  --font-display: "Source Serif 4", Georgia, serif;
+  --font-body: "Inter", system-ui, sans-serif;
+  --font-ad: "Architects Daughter", cursive;
+  --font-chewy: "Chewy", cursive;
+  --font-ph: "Patrick Hand", cursive;
+
   /* Semantic: the interface components use; aliases a primitive per mode. */
   --background: var(--paper);
   --foreground: var(--ink);
@@ -28,7 +35,9 @@
   --accent: var(--slate-dark);
   --secondary: var(--forest-dark);
   --subheadings: var(--forest-dark);
+  --tertiary: var(--rust-dark);
   --highlight: var(--rust-dark);
+  --neutral: var(--slate-light);
 }
 
 .dark {
@@ -40,9 +49,43 @@
   --accent: var(--slate-light);
   --secondary: var(--forest-light);
   --subheadings: var(--forest-light);
+  --tertiary: var(--rust-light);
   --highlight: var(--rust-light);
+  --neutral: var(--slate-dark);
 }
 
 .dev {
   outline: 1px dashed var(--forest-dark);
+}
+
+p + p {
+  margin-top: 1em;
+}
+
+h1, h2, h3, h4 {
+  font-family: var(--font-display);
+}
+
+h1 {
+  font-size: 2.5rem;
+  font-weight: 600;
+  color: var(--headings);
+}
+
+h2 {
+  font-size: 2rem;
+  font-weight: 600;
+  color: var(--subheadings);
+}
+
+h3 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--tertiary);
+}
+
+h4 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--neutral);
 }
