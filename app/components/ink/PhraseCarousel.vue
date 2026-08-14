@@ -13,15 +13,23 @@
       </defs>
     </svg>
 
-    <span v-if="!useLetters" aria-hidden="true" :class="displayClass" :style="displayStyle">{{ display }}</span>
-    <span v-else aria-hidden="true" class="inline-block whitespace-nowrap">
-      <span
-        v-for="(letter, i) in letters"
-        :key="i"
-        class="inline-block"
-        :style="letter.style"
-      >{{ letter.char === ' ' ? ' ' : letter.char }}</span>
-    </span>
+    <slot
+      :display="display"
+      :display-class="displayClass"
+      :display-style="displayStyle"
+      :use-letters="useLetters"
+      :letters="letters"
+    >
+      <span v-if="!useLetters" aria-hidden="true" :class="displayClass" :style="displayStyle">{{ display }}</span>
+      <span v-else aria-hidden="true" class="inline-block whitespace-nowrap">
+        <span
+          v-for="(letter, i) in letters"
+          :key="i"
+          class="inline-block"
+          :style="letter.style"
+        >{{ letter.char === ' ' ? ' ' : letter.char }}</span>
+      </span>
+    </slot>
   </span>
 </template>
 
