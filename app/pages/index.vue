@@ -5,7 +5,7 @@
     </div>
 
     <h2 class="font-display text-xl font-semibold tracking-tight mb-3">
-      Engineering leader. Computational biologist. Do-gooder.
+      Engineering leader. Computational biologist. Civic do-gooder.
     </h2>
 
     <p v-if="phraseItems.length" class="font-ad font-medium text-2xl mb-6">
@@ -15,11 +15,16 @@
     </p>
 
     <p>
-      I am a scientist, engineering leader, and software developer. I have a PhD in molecular biophysics, a master's
-      degree in computer science, and over two decades of experience building reliable software systems for research,
-      healthcare, and business. I enjoy solving complex problems, collaborating with smart people, and building products
-      that matter to human beings and the planet. <NuxtLink to="/about"
-        class="text-accent hover:opacity-75 transition-opacity">More...</NuxtLink>
+      I am a scientist, engineering leader, and engaged citizen. I have a PhD in
+      molecular biophysics, a master's degree in computer science, and over two
+      decades of experience architecting, building, and operating reliable
+      software systems for research, healthcare, and business. I enjoy solving
+      complex problems, collaborating with smart people, and building products
+      that matter. I am motivated by personal values and am currently exploring
+      civic engagement projects that help people participate in the democratic
+      process.
+      <NuxtLink to="/about"
+      class="text-accent hover:opacity-75 transition-opacity">More...</NuxtLink>
     </p>
 
     <section v-if="isDev && posts?.length" class="mt-8" :class="{ dev: isDev }">
