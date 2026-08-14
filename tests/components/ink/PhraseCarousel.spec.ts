@@ -5,6 +5,10 @@ function mockMatchMedia(matches: boolean) {
   window.matchMedia = vi.fn().mockReturnValue({ matches }) as unknown as typeof window.matchMedia
 }
 
+function pair(phrase: string, leadIn = 'I like...') {
+  return { lead_in: leadIn, phrase }
+}
+
 describe('phraseCarousel', () => {
   beforeEach(() => {
     vi.useFakeTimers()
@@ -15,24 +19,32 @@ describe('phraseCarousel', () => {
     vi.useRealTimers()
   })
 
-  it('renders the first phrase initially', () => {
+  it('renders the first item initially', () => {
     const wrapper = mount(PhraseCarousel, {
-      props: { phrases: ['building things that last', 'connecting with people'] },
+      props: { items: [pair('building things that last'), pair('connecting with people')] },
     })
     expect(wrapper.text()).toContain('building things that last')
   })
 
-  it('exposes an aria-label matching the current phrase for assistive tech', () => {
+  it('renders the lead-in alongside the phrase', () => {
     const wrapper = mount(PhraseCarousel, {
-      props: { phrases: ['building things that last'] },
+      props: { items: [pair('building things that last', 'I like...')] },
     })
-    expect(wrapper.attributes('aria-label')).toBe('building things that last')
+    expect(wrapper.text()).toContain('I like...')
+    expect(wrapper.text()).toContain('building things that last')
+  })
+
+  it('exposes an aria-label matching the current lead-in and phrase for assistive tech', () => {
+    const wrapper = mount(PhraseCarousel, {
+      props: { items: [pair('building things that last', 'I like...')] },
+    })
+    expect(wrapper.attributes('aria-label')).toBe('I like... building things that last')
   })
 
   it('advances to the next phrase after intervalMs plus transition time', async () => {
     const wrapper = mount(PhraseCarousel, {
       props: {
-        phrases: ['building things that last', 'connecting with people'],
+        items: [pair('building things that last'), pair('connecting with people')],
         transitions: ['fade'],
         intervalMs: 100,
       },
@@ -60,7 +72,7 @@ describe('phraseCarousel', () => {
     async (mode) => {
       const wrapper = mount(PhraseCarousel, {
         props: {
-          phrases: ['building things that last', 'connecting with people'],
+          items: [pair('building things that last'), pair('connecting with people')],
           transitions: [mode],
           // Large interval so the second cycle's timer can't fire within the test's
           // time budget below — isolates "does one transition complete" from timing math.
@@ -76,7 +88,7 @@ describe('phraseCarousel', () => {
     mockMatchMedia(true)
     const wrapper = mount(PhraseCarousel, {
       props: {
-        phrases: ['building things that last', 'connecting with people'],
+        items: [pair('building things that last'), pair('connecting with people')],
         intervalMs: 50,
       },
     })
@@ -87,7 +99,10 @@ describe('phraseCarousel', () => {
 
   it('advances through phrases using the default transition pool with no explicit props', async () => {
     const wrapper = mount(PhraseCarousel, {
-      props: { phrases: ['building things that last', 'connecting with people'], intervalMs: 100_000 },
+      props: {
+        items: [pair('building things that last'), pair('connecting with people')],
+        intervalMs: 100_000,
+      },
     })
     // Budget covers the slowest possible mode (typing) since the mode is chosen at random;
     // intervalMs is large so a second cycle can't start within this window.
@@ -95,23 +110,23 @@ describe('phraseCarousel', () => {
     expect(wrapper.vm.display).toBe('connecting with people')
   })
 
-  it('walks phrases in list order when phraseOrder is sequential', async () => {
-    const phrases = ['one', 'two', 'three']
+  it('walks items in list order when itemOrder is sequential', async () => {
+    const items = [pair('one'), pair('two'), pair('three')]
     const wrapper = mount(PhraseCarousel, {
-      props: { phrases, transitions: ['fade'], phraseOrder: 'sequential', intervalMs: 50 },
+      props: { items, transitions: ['fade'], itemOrder: 'sequential', intervalMs: 50 },
     })
     const seen: string[] = [wrapper.vm.display]
-    for (let i = 0; i < phrases.length + 1; i++) {
+    for (let i = 0; i < items.length + 1; i++) {
       await vi.advanceTimersByTimeAsync(50 + 440)
       seen.push(wrapper.vm.display)
     }
     expect(seen).toEqual(['one', 'two', 'three', 'one', 'two'])
   })
 
-  it('never repeats the same phrase twice in a row when phraseOrder is random (the default)', async () => {
-    const phrases = ['one', 'two', 'three', 'four']
+  it('never repeats the same phrase twice in a row when itemOrder is random (the default)', async () => {
+    const items = [pair('one'), pair('two'), pair('three'), pair('four')]
     const wrapper = mount(PhraseCarousel, {
-      props: { phrases, transitions: ['fade'], intervalMs: 50 },
+      props: { items, transitions: ['fade'], intervalMs: 50 },
     })
     const seen: string[] = [wrapper.vm.display]
     for (let i = 0; i < 20; i++) {

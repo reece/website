@@ -1,58 +1,67 @@
 <template>
-  <span class="relative inline-grid items-baseline" :aria-label="currentPhrase" role="text">
-    <slot :display="currentPhrase" :mode="mode">
-      <TextTransition ref="textTransitionRef" :text="currentPhrase" :mode="mode" @done="scheduleNext" />
+  <span :aria-label="ariaLabel" role="text">
+    <slot :item="currentItem" :mode="mode">
+      <template v-if="currentItem">
+        {{ currentItem.lead_in }} <TextTransition ref="textTransitionRef" :text="currentItem.phrase" :mode="mode" @done="scheduleNext" />
+      </template>
     </slot>
   </span>
 </template>
 
 <script setup lang="ts">
 /**
- * Rotates through a list of short phrases, one at a time, using a randomly (or
- * sequentially) chosen transition each cycle. Rendering is delegated to
- * TextTransition, which owns the actual animation; this component only picks
- * which phrase and mode are current.
+ * Rotates through a list of (lead-in, phrase) pairs, one at a time, using a
+ * randomly (or sequentially) chosen transition each cycle. Only the phrase
+ * animates via TextTransition; the lead-in renders plainly since it's static
+ * within most cycles. Rendering can be fully overridden via the default slot.
  *
  * @example
- * <PhraseCarousel :phrases="['building things that last', 'connecting with people']" />
+ * <PhraseCarousel :items="[{ lead_in: 'I like...', phrase: 'building things that last' }]" />
  */
 import { computed, onBeforeUnmount, onMounted, ref } from 'vue'
 import TextTransition, { TRANSITION_MODES, type TransitionMode } from './TextTransition.vue'
 
+interface PhrasePair {
+  lead_in: string
+  phrase: string
+}
+
 const props = withDefaults(defineProps<{
-  /** Phrases to cycle through. */
-  phrases: string[]
+  /** (lead-in, phrase) pairs to cycle through. */
+  items: PhrasePair[]
   /** Pool of transition modes to choose from each cycle. Defaults to all available modes. */
   transitions?: TransitionMode[]
   /** How the next transition mode is chosen from the pool. */
   transitionOrder?: 'random' | 'sequential'
-  /** How the next phrase is chosen from the list. */
-  phraseOrder?: 'random' | 'sequential'
-  /** Milliseconds each phrase stays fully visible before the next transition starts. */
+  /** How the next item is chosen from the list. */
+  itemOrder?: 'random' | 'sequential'
+  /** Milliseconds each item stays fully visible before the next transition starts. */
   intervalMs?: number
 }>(), {
   transitions: () => [...TRANSITION_MODES],
   transitionOrder: 'random',
-  phraseOrder: 'random',
+  itemOrder: 'random',
   intervalMs: 3000,
 })
 
 const index = ref(0)
-const currentPhrase = ref(props.phrases[0] ?? '')
+const currentItem = ref<PhrasePair | undefined>(props.items[0])
 const mode = ref<TransitionMode>(props.transitions[0] ?? 'fade')
 const transitionCursor = ref(0)
 const textTransitionRef = ref<InstanceType<typeof TextTransition>>()
 
+const ariaLabel = computed(() => currentItem.value ? `${currentItem.value.lead_in} ${currentItem.value.phrase}` : undefined)
+
 let timer: ReturnType<typeof setTimeout> | undefined
 
 function nextIndex(): number {
-  if (props.phraseOrder === 'random' && props.phrases.length > 1) {
+  if (props.itemOrder === 'random' && props.items.length > 1) {
     let candidate = index.value
     while (candidate === index.value)
-      candidate = Math.floor(Math.random() * props.phrases.length)
+      candidate = Math.floor(Math.random() * props.items.length)
     return candidate
   }
-  return (index.value + 1) % props.phrases.length
+  return (index.value + 1) % props.items.length
 }
 
 function nextTransition(): TransitionMode {
@@ -70,14 +79,14 @@ function scheduleNext() {
 }
 
 function advance() {
-  if (props.phrases.length < 2) {
+  if (props.items.length < 2) {
     scheduleNext()
     return
   }
 
   index.value = nextIndex()
   mode.value = nextTransition()
-  currentPhrase.value = props.phrases[index.value] ?? ''
+  currentItem.value = props.items[index.value]
 }
 
 onMounted(() => {
@@ -90,6 +99,6 @@ onBeforeUnmount(() => {
 
 defineExpose({
   /** Current phrase being displayed, for testing/inspection. */
-  display: computed(() => textTransitionRef.value?.display ?? currentPhrase.value),
+  display: computed(() => textTransitionRef.value?.display ?? currentItem.value?.phrase ?? ''),
 })
 </script>

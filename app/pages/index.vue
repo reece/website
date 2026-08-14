@@ -8,9 +8,8 @@
       Engineering leader. Computational biologist. Do-gooder.
     </h2>
 
-    <p v-if="enjoyPhrases?.length" class="font-ad text-2xl mb-6">
-      I...
-      <PhraseCarousel :phrases="enjoyPhrases" class="text-highlight font-ad font-medium" />
+    <p v-if="phraseItems.length" class="font-ad text-2xl mb-6">
+      <PhraseCarousel :items="phraseItems" class="text-highlight font-ad font-medium" />
     </p>
 
     <p>
@@ -82,7 +81,9 @@ const { data: posts } = await useAsyncData('home-posts', () =>
 const { data: enjoyPhrasesData } = await useAsyncData('enjoy-phrases', () =>
   queryCollection('enjoyPhrases').first(),
 )
-const enjoyPhrases = computed(() => enjoyPhrasesData.value?.phrases ?? [])
+const phraseItems = computed(() =>
+  (enjoyPhrasesData.value?.phrases ?? []).map(phrase => ({ lead_in: 'I...', phrase })),
+)
 
 const whatIDo = [
   { title: 'Build', body: 'I design and build software systems that are robust, maintainable, and actually used.' },
