@@ -15,8 +15,8 @@ describe('headerBrush', () => {
     expect(wrapper.attributes('style')).toContain('color: #6A7C6E')
   })
 
-  it('defaults to the slate color', () => {
+  it('defaults to the accent color', () => {
     const wrapper = mount(HeaderBrush)
-    expect(wrapper.attributes('style')).toContain('color: var(--slate)')
+    expect(wrapper.attributes('style')).toContain('color: var(--accent)')
   })
 })
