@@ -1,6 +1,6 @@
 <template>
   <span :aria-label="ariaLabel" role="text">
-    <slot :item="currentItem" :mode="mode">
+    <slot :item="currentItem" :mode="mode" :on-done="scheduleNext">
       <template v-if="currentItem">
         {{ currentItem.lead_in }} <TextTransition ref="textTransitionRef" :text="currentItem.phrase" :mode="mode" @done="scheduleNext" />
       </template>
@@ -13,10 +13,18 @@
  * Rotates through a list of (lead-in, phrase) pairs, one at a time, using a
  * randomly (or sequentially) chosen transition each cycle. Only the phrase
  * animates via TextTransition; the lead-in renders plainly since it's static
- * within most cycles. Rendering can be fully overridden via the default slot.
+ * within most cycles. Rendering can be fully overridden via the default slot,
+ * which exposes `item` (current pair), `mode` (chosen transition), and
+ * `onDone` (call once the phrase's own transition finishes, to advance).
  *
  * @example
  * <PhraseCarousel :items="[{ lead_in: 'I like...', phrase: 'building things that last' }]" />
+ *
+ * @example Custom markup, styling owned by the caller
+ * <PhraseCarousel :items="phraseItems" v-slot="{ item, mode, onDone }">
+ *   <span class="lead-in">{{ item?.lead_in }}</span>
+ *   <TextTransition class="phrase" :text="item?.phrase ?? ''" :mode="mode" @done="onDone" />
+ * </PhraseCarousel>
  */
 import { computed, onBeforeUnmount, onMounted, ref } from 'vue'
 import TextTransition, { TRANSITION_MODES, type TransitionMode } from './TextTransition.vue'

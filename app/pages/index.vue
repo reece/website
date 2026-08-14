@@ -8,8 +8,10 @@
       Engineering leader. Computational biologist. Do-gooder.
     </h2>
 
-    <p v-if="phraseItems.length" class="font-ad text-2xl mb-6">
-      <PhraseCarousel :items="phraseItems" class="text-highlight font-ad font-medium" />
+    <p v-if="phraseItems.length" class="font-ad font-medium text-2xl mb-6">
+      <PhraseCarousel :items="phraseItems" v-slot="{ item, mode, onDone }">
+        <span class="text-primary">{{ item?.lead_in }}</span> <TextTransition class="text-highlight" :text="item?.phrase ?? ''" :mode="mode" @done="onDone" />
+      </PhraseCarousel>
     </p>
 
     <p>
