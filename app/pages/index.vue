@@ -78,11 +78,13 @@ const { data: posts } = await useAsyncData('home-posts', () =>
     .all(),
 )
 
-const { data: enjoyPhrasesData } = await useAsyncData('enjoy-phrases', () =>
-  queryCollection('enjoyPhrases').first(),
+const { data: phraseCarouselData } = await useAsyncData('phrase-carousel', () =>
+  queryCollection('phraseCarousel').first(),
 )
 const phraseItems = computed(() =>
-  (enjoyPhrasesData.value?.phrases ?? []).map(phrase => ({ lead_in: 'I...', phrase })),
+  Object.values(phraseCarouselData.value?.phrases ?? {}).flatMap(section =>
+    section.phrases.map(phrase => ({ lead_in: section.lead_in, phrase })),
+  ),
 )
 
 const whatIDo = [

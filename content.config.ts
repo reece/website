@@ -16,11 +16,14 @@ export default defineContentConfig({
       type: 'page',
       source: 'pages/**',
     }),
-    enjoyPhrases: defineCollection({
+    phraseCarousel: defineCollection({
       type: 'data',
-      source: 'data/enjoy-phrases.yml',
+      source: 'data/phrase-carousel.yml',
       schema: z.object({
-        phrases: z.array(z.string()),
+        phrases: z.record(z.object({
+          lead_in: z.string(),
+          phrases: z.array(z.string()),
+        })),
       }),
     }),
   },
