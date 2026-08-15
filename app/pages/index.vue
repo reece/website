@@ -9,22 +9,21 @@
     </h2>
 
     <p v-if="phraseItems.length" class="font-ad font-medium text-2xl mb-6">
-      <PhraseCarousel :items="phraseItems" v-slot="{ item, mode, onDone }">
+      <PhraseCarousel :items="phraseItems" :interval-ms=10000 v-slot="{ item, mode, onDone }">
         <span class="text-primary">{{ item?.lead_in }}</span> <TextTransition class="text-highlight" :text="item?.phrase ?? ''" :mode="mode" @done="onDone" />
       </PhraseCarousel>
     </p>
 
     <p>
-      I am a scientist, engineering leader, and engaged citizen. I have a PhD in
-      molecular biophysics, a master's degree in computer science, and over two
-      decades of experience architecting, building, and operating reliable
-      software systems for research, healthcare, and business. I enjoy solving
-      complex problems, collaborating with smart people, and building products
-      that matter. I am motivated by personal values and am currently exploring
-      civic engagement projects that help people participate in the democratic
-      process.
-      <NuxtLink to="/about"
-      class="text-accent hover:opacity-75 transition-opacity">More...</NuxtLink>
+      I am a husband and father, an engaged citizen, a scientist, and an
+      engineering leader. I have over two decades of experience architecting,
+      building, and operating reliable software systems for research,
+      healthcare, and business. I enjoy solving complex problems, collaborating
+      with smart people, and building products that matter and that people
+      appreciate.  I am driven to build a society that is rooted in equality,
+      justice, a sustainable economy, and collective thriving. <NuxtLink
+      to="/about" class="text-accent hover:opacity-75
+      transition-opacity">More...</NuxtLink>
     </p>
 
     <section v-if="isDev && posts?.length" class="mt-8" :class="{ dev: isDev }">
