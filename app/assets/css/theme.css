@@ -64,29 +64,26 @@ p + p {
 
 h1, h2, h3, h4 {
   font-family: var(--font-display);
+  font-weight: 600;
 }
 
 h1 {
   font-size: 2.5rem;
-  font-weight: 600;
   color: var(--headings);
 }
 
 h2 {
   font-size: 2rem;
-  font-weight: 600;
   color: var(--subheadings);
 }
 
 h3 {
   font-size: 1.5rem;
-  font-weight: 600;
   color: var(--tertiary);
 }
 
 h4 {
   font-size: 1.25rem;
-  font-weight: 600;
   color: var(--neutral);
 }
 
@@ -99,6 +96,25 @@ a {
 
 a:hover {
   opacity: 0.75;
+}
+
+h1 a, h2 a, h3 a, h4 a {
+  color: inherit;
+  text-decoration: none;
+}
+
+h1 a:hover, h2 a:hover, h3 a:hover, h4 a:hover {
+  opacity: 1;
+}
+
+h1 a::after, h2 a::after, h3 a::after, h4 a::after {
+  content: ' #';
+  opacity: 0;
+  transition: opacity 0.15s;
+}
+
+h1 a:hover::after, h2 a:hover::after, h3 a:hover::after, h4 a:hover::after {
+  opacity: 0.5;
 }
 
 em {
