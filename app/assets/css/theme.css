@@ -89,3 +89,23 @@ h4 {
   font-weight: 600;
   color: var(--neutral);
 }
+
+a {
+  color: var(--accent);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+  transition: opacity 0.15s;
+}
+
+a:hover {
+  opacity: 0.75;
+}
+
+em {
+  font-style: italic;
+}
+
+strong {
+  font-weight: 600;
+  color: var(--headings);
+}

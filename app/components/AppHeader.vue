@@ -2,7 +2,7 @@
   <header class="relative">
     <MaskImage name="brushes/thick-box-taper-1" color="var(--primary)" height="clamp(76px, 20vw, 100px)" />
     <div class="absolute inset-0 flex flex-col justify-center pl-8 pr-6 text-background">
-      <NuxtLink to="/" class="font-display text-xl sm:text-3xl font-semibold tracking-tight">
+      <NuxtLink to="/" class="font-display text-xl sm:text-3xl font-semibold tracking-tight text-background no-underline">
         Reece Hart, PhD
       </NuxtLink>
       <nav class="flex items-center">
@@ -13,7 +13,7 @@
               custom
               v-slot="{ href, navigate, isActive }"
             >
-              <a :href="href" class="opacity-75 hover:opacity-100 transition-opacity" @click="navigate">
+              <a :href="href" class="text-background no-underline opacity-75 hover:opacity-100 transition-opacity" @click="navigate">
                 <MarkerUnderline v-if="isActive" color="var(--background)">{{ link.label }}</MarkerUnderline>
                 <span v-else>{{ link.label }}</span>
               </a>

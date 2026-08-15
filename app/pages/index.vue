@@ -1,7 +1,8 @@
 <template>
   <div class="relative font-body text-foreground">
     <div class="fixed inset-0 z-0 pointer-events-none opacity-[0.15] dark:opacity-[0.08]">
-      <FadedImage src="/images/sf-from-marin.webp" alt="San Francisco Bay seen from Marin" position="75% 30%" />
+      <FadedImage src="/images/sf-from-marin.webp" alt="San Francisco Bay seen from Marin"
+        position="75% 30%" />
     </div>
 
     <h2 class="font-display text-xl font-semibold tracking-tight mb-3">
@@ -10,7 +11,9 @@
 
     <p v-if="phraseItems.length" class="font-ad font-medium text-2xl mb-6">
       <PhraseCarousel :items="phraseItems" :interval-ms=10000 v-slot="{ item, mode, onDone }">
-        <span class="text-primary">{{ item?.lead_in }}</span> <TextTransition class="text-highlight" :text="item?.phrase ?? ''" :mode="mode" @done="onDone" />
+        <span class="text-primary">{{ item?.lead_in }}</span>
+        <TextTransition class="text-highlight" :text="item?.phrase ?? ''" :mode="mode"
+          @done="onDone" />
       </PhraseCarousel>
     </p>
 
@@ -20,9 +23,8 @@
       building, and operating reliable software systems for research,
       healthcare, and business. I enjoy solving complex problems, collaborating
       with smart people, and building products that matter and that people
-      appreciate.  I am driven to build a society that is rooted in equality,
-      justice, a sustainable economy, and collective thriving. <NuxtLink
-      to="/about" class="text-accent hover:opacity-75
+      appreciate. I am driven to build a society that is rooted in equality,
+      justice, a sustainable economy, and collective thriving. <NuxtLink to="/about" class="text-accent hover:opacity-75
       transition-opacity">More...</NuxtLink>
     </p>
 
@@ -32,8 +34,10 @@
         <li v-for="(post, index) in posts" :key="post.path">
           <ThinPenLine v-if="index > 0" class="mb-5" />
           <NuxtLink :to="post.path" class="group block">
-            <time class="text-xs uppercase tracking-wide opacity-50">{{ formatDate(post.date) }}</time>
-            <h3 class="font-display text-base font-medium group-hover:text-accent transition-colors mt-0.5">
+            <time class="text-xs uppercase tracking-wide opacity-50">{{ formatDate(post.date)
+              }}</time>
+            <h3
+              class="font-display text-base font-medium group-hover:text-accent transition-colors mt-0.5">
               {{ post.title }}
             </h3>
             <p v-if="post.description" class="font-body text-sm opacity-75 mt-1">
@@ -42,12 +46,13 @@
           </NuxtLink>
         </li>
       </ul>
-      <NuxtLink to="/blog" class="inline-block mt-6 font-body text-sm text-accent hover:opacity-75 transition-opacity">
+      <NuxtLink to="/blog"
+        class="inline-block mt-6 font-body text-sm text-accent hover:opacity-75 transition-opacity">
         All posts →
       </NuxtLink>
     </section>
 
-    <InkRule variant="fine" color="var(--highlight)" class="mb-12" />
+    <MaskImage name="lines/thin" color="var(--tertiary)" class="mb-2 mt-2"/>
 
     <section>
       <h2 class="font-display text-xl font-semibold mb-4">Contact</h2>
