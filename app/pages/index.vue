@@ -5,6 +5,10 @@
         position="75% 30%" />
     </div>
 
+    <div class="w-32 mx-auto mb-4 md:w-40 md:float-right md:ml-6 md:mb-4">
+      <FadedImage src="/images/reece.webp" alt="Reece Hart" />
+    </div>
+
     <h2 class="font-display text-xl font-semibold tracking-tight mb-3">
       Engineering leader. Computational biologist. Civic do-gooder.
     </h2>
@@ -52,7 +56,7 @@
       </NuxtLink>
     </section>
 
-    <MaskImage name="lines/thin" color="var(--tertiary)" class="mb-2 mt-2"/>
+    <MaskImage name="lines/thin" color="var(--tertiary)" class="mb-6 mt-6"/>
 
     <section>
       <h2 class="font-display text-xl font-semibold mb-4">Contact</h2>
