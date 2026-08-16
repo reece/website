@@ -2,3 +2,9 @@ allowBuilds:
   better-sqlite3: true
   esbuild: true
   "@parcel/watcher": true
+
+minimumReleaseAge: 1440
+
+minimumReleaseAgeExclude:
+  - electron-to-chromium@1.5.407
+  - vue-component-type-helpers@3.3.10
