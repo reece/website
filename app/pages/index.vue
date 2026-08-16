@@ -98,7 +98,7 @@ const socialLinks: SocialLink[] = [
   { label: 'Not on Facebook', icon: 'i-simple-icons-facebook', struckThrough: true },
 ]
 
-useSeoMeta({ title: 'About · Reece Hart' })
+useSeoMeta({ title: 'Reece Hart' })
 
 const isDev = import.meta.dev
 

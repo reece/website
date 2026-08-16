@@ -5,6 +5,9 @@ export default defineNuxtConfig({
   app: {
     head: {
       link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }],
+      // Every page already composes its own full title (e.g. "Writing · Reece Hart"),
+      // so skip the module's default "%s | site.name" template to avoid doubling it.
+      titleTemplate: '%s',
     },
   },
 
@@ -14,7 +17,25 @@ export default defineNuxtConfig({
     '@nuxtjs/color-mode',
     '@nuxt/fonts',
     '@nuxt/image',
+    '@nuxtjs/seo',
   ],
+
+  site: {
+    url: 'https://reecehart.com',
+    name: 'Reece Hart',
+    description: 'Engineering leader. Computational biologist. Civic do-gooder.',
+  },
+
+  seo: {
+    meta: {
+      ogImage: 'https://reecehart.com/images/reece.webp',
+    },
+  },
+
+  // Dynamic OG image generation not needed yet; using a static image site-wide.
+  ogImage: {
+    enabled: false,
+  },
 
   colorMode: {
     classSuffix: '',
