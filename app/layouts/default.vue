@@ -15,10 +15,14 @@
           © {{ year }} Reece Hart
         </p>
       </div>
+      <p class="text-background text-xs text-center">
+        {{ buildInfo.branch }} • {{ buildInfo.commit }} • {{ buildInfo.timestamp }}
+      </p>
     </footer>
   </div>
 </template>
 
 <script setup lang="ts">
 const year = new Date().getFullYear()
+const { buildInfo } = useRuntimeConfig().public
 </script>

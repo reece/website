@@ -1,6 +1,27 @@
+import { execFileSync } from 'node:child_process'
+
+function gitOutput(args: string[]) {
+  try {
+    return execFileSync('git', args, { encoding: 'utf8' }).trim()
+  }
+  catch {
+    return 'unknown'
+  }
+}
+
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
   compatibilityDate: '2025-11-01',
+
+  runtimeConfig: {
+    public: {
+      buildInfo: {
+        branch: gitOutput(['rev-parse', '--abbrev-ref', 'HEAD']),
+        commit: gitOutput(['rev-parse', '--short', 'HEAD']),
+        timestamp: new Date().toISOString(),
+      },
+    },
+  },
 
   app: {
     head: {
