@@ -6,6 +6,8 @@ title: About · Reece Hart
 
 ### Professional Experience
 
+[Curriculum Vitae](https://t.ly/reece-cv)
+
 I am a scientist and engineering leader with over two decades of experience building reliable software systems for research and clinical genetic testing. I enjoy collaborating with smart people to solve complex problems and leading teams that create products that matter. I have a knack for developing the big picture of a mission while staying focused on incremental delivery of tangible value, and building the teams that make this possible.
 
 I earned a BA in molecular biology from [UC San Diego](https://ucsd.edu/) and worked on early mapping of chromosome 11 for the nascent Human Genome Project at the [Salk Institute](https://salk.edu/). I created a custom dual-degree program in molecular biophysics (PhD) and computer science (MS) at Washington University in St. Louis, which I finished in 1998. I worked on pattern discovery in protein sequences at the [IBM Watson Research Center](https://research.ibm.com/labs/yorktown-heights). This education was enabled by public funding through the [National Institutes of Health](https://nih.gov/), [the National Science Foundation](https://nsf.gov/), and the [Department of Energy](https://doe.gov/), for which I am very grateful.
