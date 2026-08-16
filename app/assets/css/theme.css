@@ -70,21 +70,41 @@ h1, h2, h3, h4 {
 h1 {
   font-size: 2.5rem;
   color: var(--headings);
+  margin-bottom: 1vh;
 }
 
 h2 {
   font-size: 2rem;
   color: var(--subheadings);
+  margin-bottom: 1vh;
 }
 
 h3 {
   font-size: 1.5rem;
   color: var(--tertiary);
+  margin-bottom: 1vh;
 }
 
 h4 {
   font-size: 1.25rem;
   color: var(--neutral);
+  margin-bottom: 1vh;
+}
+
+h1:not(:first-of-type) {
+  margin-top: 5vh;
+}
+
+h2:not(:first-of-type) {
+  margin-top: 4vh;
+}
+
+h3:not(:first-of-type) {
+  margin-top: 3vh;
+}
+
+h4:not(:first-of-type) {
+  margin-top: 2vh;
 }
 
 a {
@@ -124,4 +144,28 @@ em {
 strong {
   font-weight: 600;
   color: var(--headings);
+}
+
+/* image floats */
+
+.float-left, .float-right {
+  width: 40%;
+  aspect-ratio: 3 / 2;
+  object-fit: cover;
+}
+.float-left {
+  float: left;
+  margin: 0 1.5em 0 0;
+}
+.float-right {
+  float: right;
+  margin: 0 0 0 1.5em;
+}
+
+@media (max-width: 640px) {
+  .float-left, .float-right {
+    float: none;
+    width: 100%;
+    margin: 0 0 1em 0;
+  }
 }
