@@ -51,7 +51,7 @@ function toggleColorMode() {
 const links = [
   { label: '🏠️', to: '/' },
   { label: 'About', to: '/about' },
-  { label: 'Blog', to: '/blog', dev: true },
+  { label: 'Writing', to: '/writing', dev: true },
   { label: 'Projects', to: '/projects', dev: true },
 ].filter(link => !link.dev || import.meta.dev)
 </script>

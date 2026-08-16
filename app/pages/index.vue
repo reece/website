@@ -50,7 +50,7 @@
           </NuxtLink>
         </li>
       </ul>
-      <NuxtLink to="/blog"
+      <NuxtLink to="/writing"
         class="inline-block mt-6 font-body text-sm text-accent hover:opacity-75 transition-opacity">
         All posts →
       </NuxtLink>
@@ -87,7 +87,7 @@ function formatDate(date: string) {
 }
 
 const { data: posts } = await useAsyncData('home-posts', () =>
-  queryCollection('blog')
+  queryCollection('writing')
     .order('date', 'DESC')
     .limit(5)
     .all(),

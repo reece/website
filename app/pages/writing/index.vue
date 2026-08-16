@@ -47,8 +47,8 @@
 <script setup lang="ts">
 useSeoMeta({ title: 'Writing · Reece Hart', description: 'Writing on genomics, bioinformatics, and software.' })
 
-const { data: posts } = await useAsyncData('blog-list', () =>
-  queryCollection('blog')
+const { data: posts } = await useAsyncData('writing-list', () =>
+  queryCollection('writing')
     .order('date', 'DESC')
     .all(),
 )

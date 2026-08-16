@@ -43,8 +43,8 @@
 <script setup lang="ts">
 const route = useRoute()
 
-const { data: post } = await useAsyncData(`blog-${route.params.slug}`, () =>
-  queryCollection('blog').path(`/blog/${route.params.slug}`).first(),
+const { data: post } = await useAsyncData(`writing-${route.params.slug}`, () =>
+  queryCollection('writing').path(`/writing/${route.params.slug}`).first(),
 )
 
 if (post.value) {
