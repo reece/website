@@ -56,19 +56,22 @@
       </NuxtLink>
     </section>
 
-    <MaskImage name="lines/thin" color="var(--tertiary)" class="mb-6 mt-6"/>
-
+    <ThinPenLine name="lines/thin" color="var(--tertiary)" class="mb-6 mt-6 px-24"/>
+  
     <section>
-      <h2 class="font-display text-xl font-semibold mb-4">Contact</h2>
-      <p class="text-sm opacity-75 mb-3">The best way to reach me is by email.</p>
-      <ul class="space-y-2 text-sm">
-        <li>
-          Email: <a href="mailto:reece@reecehart.com"
-            class="text-accent hover:opacity-75 transition-opacity">reece@reecehart.com</a>
-        </li>
-        <li>
-          GitHub: <a href="https://github.com/reece" target="_blank" rel="noopener noreferrer"
-            class="text-accent hover:opacity-75 transition-opacity">github.com/reece</a>
+      <ul class="flex flex-wrap items-center justify-center gap-5 text-2xl">
+        <li v-for="link in socialLinks" :key="link.label">
+          <span v-if="link.struckThrough" :title="link.label"
+            class="relative grid place-items-center size-[1em] text-foreground opacity-75">
+            <span :class="link.icon" class="col-start-1 row-start-1" />
+            <span class="i-ph-prohibit-bold col-start-1 row-start-1 text-3xl text-rust" />
+          </span>
+          <a v-else-if="link.href" :href="link.href" :title="link.label"
+            :target="link.href.startsWith('mailto:') ? undefined : '_blank'"
+            :rel="link.href.startsWith('mailto:') ? undefined : 'noopener noreferrer'"
+            class="block text-foreground opacity-75 hover:opacity-100 hover:text-accent transition-opacity">
+            <span :class="link.icon" />
+          </a>
         </li>
       </ul>
     </section>
@@ -77,6 +80,23 @@
 
 <script setup lang="ts">
 definePageMeta({ layout: 'default' })
+
+interface SocialLink {
+  label: string
+  icon: string
+  href?: string
+  struckThrough?: boolean
+}
+
+const socialLinks: SocialLink[] = [
+  { label: 'Email', href: 'mailto:reece@reecehart.com', icon: 'i-ph-envelope' },
+  { label: 'LinkedIn', href: 'https://linkedin.com/in/reece', icon: 'i-simple-icons-linkedin' },
+  { label: 'GitHub', href: 'https://github.com/reece', icon: 'i-simple-icons-github' },
+  { label: 'Bluesky', href: 'https://bsky.app/profile/reece-hart.bsky.social', icon: 'i-simple-icons-bluesky' },
+  { label: 'Signal', href: 'https://signal.me/#eu/reece.75', icon: 'i-simple-icons-signal' },
+  { label: 'Not on Twitter/X', icon: 'i-simple-icons-twitter', struckThrough: true },
+  { label: 'Not on Facebook', icon: 'i-simple-icons-facebook', struckThrough: true },
+]
 
 useSeoMeta({ title: 'About · Reece Hart' })
 
