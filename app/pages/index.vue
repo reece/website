@@ -11,7 +11,7 @@
 
     <p v-if="phraseItems.length" class="font-ad font-medium text-2xl mb-6">
       <PhraseCarousel :items="phraseItems" :interval-ms=10000 v-slot="{ item, mode, onDone }">
-        <span class="text-primary">{{ item?.lead_in }}</span>
+        <span class="text-primary">{{ item?.lead_in }}</span>&nbsp;
         <TextTransition class="text-highlight" :text="item?.phrase ?? ''" :mode="mode"
           @done="onDone" />
       </PhraseCarousel>
@@ -93,8 +93,8 @@ const { data: phraseCarouselData } = await useAsyncData('phrase-carousel', () =>
   queryCollection('phraseCarousel').first(),
 )
 const phraseItems = computed(() =>
-  Object.values(phraseCarouselData.value?.phrases ?? {}).flatMap(section =>
-    section.phrases.map(phrase => ({ lead_in: section.lead_in, phrase })),
+  Object.entries(phraseCarouselData.value?.phrases ?? {}).flatMap(([lead_in, phrases]) =>
+    phrases.map(phrase => ({ lead_in, phrase })),
   ),
 )
 

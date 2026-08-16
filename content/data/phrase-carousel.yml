@@ -1,52 +1,34 @@
 phrases:
-  i:
-    lead_in: "I..."
-    phrases:
-      - build things that last
-      - work toward a sustainable society
-  i_like:
-    lead_in: "I like..."
-    phrases:
-      - being with my family
-      - building communities
-      - building things that last
-      - building tools that people use
-      - coaching ultimate frisbee
-      - connecting with people
-      - contributing to open source software
-      - dinners with friends
-      - figuring things out
-      - fostering kindness
-      - leading kind, fun, and effective teams
-      - learning from others
-      - lifting others up
-      - organizing complexity
-      - mentoring engineers and scientists
-      - playing goaltimate
-      - skippering sailboats
-      - working toward a sustainable society
-  i_like_to:
-    lead_in: "I like to..."
-    phrases:
-      - build things that last
-      - build tools that people use
-      - coach ultimate frisbee
-      - connect with people
-      - contribute to open source software
-      - foster kindness
-      - lead kind, fun, and effective teams
-      - learn from others
-      - lift others up
-      - mentor engineers and scientists
-      - organize complexity
-      - play goaltimate
-      - skipper sailboat races
-  i_value:
-    lead_in: "I value..."
-    phrases:
-      - kindness
-      - collaboration
-      - curiosity
-      - learning
-      - growth
-      - sustainability
+  I…:
+    - build things that last
+    - building community
+  I work toward…:
+    - sustainable society
+  I enjoy…:
+    - being with my family
+    - building tools that people use
+    - coaching ultimate frisbee
+    - connecting with people
+    - contributing to open source software
+    - dinners with friends
+    - mentoring engineers and scientists
+    - playing goaltimate
+    - skippering sailboats
+  I like to…:
+    - build tools that people use
+    - contribute to open source software
+    - figure things out
+    - lead kind, fun, and effective teams
+    - learn from others
+    - organize and simplify complexity
+  I appreciate…:
+    - generosity
+    - people who foster kindness
+    - people who lift others up
+  I value…:
+    - collaboration
+    - curiosity
+    - growth
+    - kindness
+    - learning
+    - sustainability
