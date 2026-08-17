@@ -5,15 +5,17 @@
         position="75% 30%" />
     </div>
 
-    <div class="w-32 mx-auto mb-4 md:w-40 md:float-right md:ml-6 md:mb-4">
-      <FadedImage src="/images/reece.webp" alt="Reece Hart" />
-    </div>
+    <div class="grid grid-cols-2 items-center gap-4 md:gap-6 mb-4">
+      <div class="w-32 md:w-40 justify-self-end">
+        <FadedImage src="/images/reece.webp" alt="Reece Hart" />
+      </div>
 
-    <h2 class="font-display text-xl font-semibold tracking-tight mb-3 text-center md:text-left">
-      <span class="whitespace-nowrap">Engineering leader.</span> &nbsp;
-      <span class="whitespace-nowrap">Computational biologist.</span> &nbsp; 
-      <span class="whitespace-nowrap">Civic do-gooder.</span>
-    </h2>
+      <p class="font-display font-semibold text-secondary tracking-tight text-left justify-self-start flex flex-col gap-1 sm:gap-2 md:gap-3 text-sm sm:text-lg md:text-xl">
+        <span>Engineering leader.</span>
+        <span>Computational biologist.</span>
+        <span>Civic do-gooder.</span>
+      </p>
+    </div>
 
     <p v-if="phraseItems.length" class="font-ad font-medium text-2xl mb-6">
       <PhraseCarousel :items="phraseItems" :interval-ms=4000 v-slot="{ item, mode, onDone }">
