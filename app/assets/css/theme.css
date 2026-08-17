@@ -26,6 +26,9 @@
   --font-chewy: "Chewy", cursive;
   --font-ph: "Patrick Hand", cursive;
 
+  /* Shared chrome for photographic images (FadedImage, floated markdown images). */
+  --image-radius: 0.75rem;
+
   /* Semantic: the interface components use; aliases a primitive per mode. */
   --background: var(--paper);
   --foreground: var(--ink);
@@ -152,6 +155,7 @@ strong {
   width: 40%;
   aspect-ratio: 3 / 2;
   object-fit: cover;
+  border-radius: var(--image-radius);
 }
 .float-left {
   float: left;

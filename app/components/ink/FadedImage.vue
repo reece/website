@@ -1,5 +1,5 @@
 <template>
-  <div class="relative w-full h-full rounded-xl overflow-hidden">
+  <div class="relative w-full h-full overflow-hidden" style="border-radius: var(--image-radius)">
     <NuxtImg :src="src" :alt="alt" class="w-full h-full object-cover" :style="{ objectPosition: position }" />
     <div v-if="faded" class="absolute inset-0 pointer-events-none" :style="fadeStyle" />
   </div>
