@@ -23,7 +23,7 @@ describe('fadedImage', () => {
 
   it('always applies rounded corners to the wrapper', () => {
     const wrapper = mountFadedImage({ src: '/images/sf-from-marin.png', alt: 'San Francisco Bay' })
-    expect(wrapper.classes()).toContain('rounded-xl')
+    expect(wrapper.attributes('style')).toContain('border-radius: var(--image-radius)')
   })
 
   it('renders no fade overlay by default', () => {
