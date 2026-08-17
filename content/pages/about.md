@@ -6,7 +6,7 @@ title: About · Reece Hart
 
 ### Professional Experience
 
-[Curriculum Vitae](https://t.ly/reece-cv)
+[Curriculum Vitae (PDF)](https://t.ly/reece-cv)
 
 I am a scientist and engineering leader with over two decades of experience building reliable software systems for research and clinical genetic testing. I enjoy collaborating with smart people to solve complex problems and leading teams that create products that matter. I have a knack for developing the big picture of a mission while staying focused on incremental delivery of tangible value, and building the teams that make this possible.
 
