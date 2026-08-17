@@ -29,7 +29,7 @@ Over the last decade, I have become increasingly determined to use my time, skil
 
 ### Personal Life
 
-I live in San Francisco with my wife, Hanna Clements-Hart. We have three adult children who were raised in San Francisco. I play [ultimate](https://en.wikipedia.org/wiki/Ultimate_frisbee) and [goaltimate](https://en.wikipedia.org/wiki/Goaltimate) (roughly like half-court ultimate) regularly in pickup, leagues, and club teams. I have coached youth ultimate through [Ultimate Impact](https://www.ultimate-impact.org/) for eight years. I sail regularly on San Francisco Bay, including lighthearted racing through the [South Beach Yacht Club](https://southbeachyachtclub.org/).
+I live in San Francisco with my wife, Hanna Clements-Hart. We have three adult children who were raised in San Francisco. I play [ultimate](https://en.wikipedia.org/wiki/Ultimate_frisbee) regularly in pickup, leagues, and club teams. I have coached youth ultimate through [Ultimate Impact](https://www.ultimate-impact.org/) for eight years. I sail regularly on San Francisco Bay, including lighthearted racing through the [South Beach Yacht Club](https://southbeachyachtclub.org/).
 
 ![Reece sailing on Fogdog](/images/skipper.webp){.float-right}
 ![Reece sailing on Fogdog](/images/tnh.webp){.float-left}
