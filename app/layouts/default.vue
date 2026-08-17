@@ -11,13 +11,11 @@
     <footer>
       <div class="relative">
         <MaskImage name="brushes/medium-taper-2" color="var(--secondary)" :height-scale="0.8" flip="both" />
-        <p class="absolute inset-0 flex items-center justify-center text-sm text-background">
+        <p class="absolute inset-0 flex items-center justify-center text-sm text-background"
+          :title="`${buildInfo.branch} • ${buildInfo.commit} • ${buildInfo.timestamp}`">
           © {{ year }} Reece Hart
         </p>
       </div>
-      <p class="text-background text-xs text-center">
-        {{ buildInfo.branch }} • {{ buildInfo.commit }} • {{ buildInfo.timestamp }}
-      </p>
     </footer>
   </div>
 </template>
