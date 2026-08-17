@@ -9,13 +9,16 @@
       <FadedImage src="/images/reece.webp" alt="Reece Hart" />
     </div>
 
-    <h2 class="font-display text-xl font-semibold tracking-tight mb-3">
-      Engineering leader. Computational biologist. Civic do-gooder.
+    <h2 class="font-display text-xl font-semibold tracking-tight mb-3 text-center md:text-left">
+      <span class="whitespace-nowrap">Engineering leader.</span> &nbsp;
+      <span class="whitespace-nowrap">Computational biologist.</span> &nbsp; 
+      <span class="whitespace-nowrap">Civic do-gooder.</span>
     </h2>
 
     <p v-if="phraseItems.length" class="font-ad font-medium text-2xl mb-6">
-      <PhraseCarousel :items="phraseItems" :interval-ms=10000 v-slot="{ item, mode, onDone }">
-        <span class="text-primary">{{ item?.lead_in }}</span>&nbsp;
+      <PhraseCarousel :items="phraseItems" :interval-ms=4000 v-slot="{ item, mode, onDone }">
+        <span class="text-primary">{{ item?.lead_in }}</span><span
+          class="hidden sm:inline">&nbsp;</span><br class="sm:hidden">
         <TextTransition class="text-highlight" :text="item?.phrase ?? ''" :mode="mode"
           @done="onDone" />
       </PhraseCarousel>
