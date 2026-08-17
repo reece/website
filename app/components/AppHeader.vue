@@ -19,6 +19,8 @@
               </a>
             </NuxtLink>
           </li>
+          <!-- 
+          Dark mode works, but isn't worth the visual noise
           <li>
             <button
               aria-label="Toggle dark mode"
@@ -28,7 +30,7 @@
               <span v-if="colorMode.value === 'dark'" class="i-ph-sun block translate-y-[0.1em]" />
               <span v-else class="i-ph-moon block translate-y-[0.1em]" />
             </button>
-          </li>
+          </li> -->
         </ul>
       </nav>
     </div>
