@@ -8,13 +8,18 @@ title: About · Reece Hart
 
 [Curriculum Vitae (PDF)](https://t.ly/reece-cv)
 
-I am a scientist and engineering leader with over two decades of experience
-building reliable software systems for research and clinical genetic testing --
-from CTO and research computing leadership roles to scientific standards work as
-first or senior (last) author. I have a knack for helping teams articulate
-mission and strategy messages while staying focused on incremental delivery of
-tangible value. I enjoy collaborating with smart people to solve complex
-problems and leading teams that create products that matter.
+I am a scientist and product-focused engineering leader with over two decades of
+experience building reliable software systems for research and clinical genetic
+testing -- from CTO and research computing leadership roles to scientific
+standards work as primary (first) or senior (last) author. I have a knack for
+helping teams articulate mission and strategy messages while staying focused on
+incremental delivery of tangible value. I enjoy collaborating with smart people
+to solve complex problems and leading teams that create products that matter. I
+think strategically and have a bias toward action. I am comfortable building
+scrappy solutions for quick answers and resilient systems for mission-critical
+operations.  I have deep experience with a variety of contract negotiations and
+a keen eye for strategic opportunity, risk, and ambiguity. I have managed
+numerous business partnerships.
 
 I earned a BA in molecular biology from [UC San Diego](https://ucsd.edu/) and
 worked on early mapping of chromosome 11 for the nascent Human Genome Project at
@@ -35,21 +40,27 @@ system that was used by research, development, and legal teams for over a decade
 to discover and analyze protein sequences. Unison provided continuously updated,
 indexed, and versioned feature predictions from over 60 sources and methods
 across all known human and non-human proteins and it contributed to numerous
-drug target development programs. I oversaw Research Computing Architecture and
-Operations, which entailed managing a matrixed team of approximately 20 IT
-professionals and an annual equipment and services budget of $30M, and providing
-reliable scientific computing services to 1300 staff in Genentech Research.
+drug target development programs. I was promoted to manage Research Computing
+and became responsible for the architecture, budget, operations, and
+coordination of computing services that served ~1300 staff in Genentech
+Research. In that role, I routinely met with directors of computing-intensive
+departments to plan spending (combined capital + operational budget of $30-35M)
+and to coordinate the work of the more than 20 IT and application personnel.  I
+negotiated most contracts for software and services used by Research.
 
-At [Invitae](https://www.invitae.com/), I began as an informal consultant and
-reference for venture capital for series A funding.  I was among the initial
-team of tremendously talented and focused individuals who developed the
-laboratory methods and systems that proved the clinical and financial
-effectiveness of next generation sequencing for clinical genetics. We delivered
-reports to over six million patients and their clinicians before the company was
-acquired by LabCorp. In addition to product development and engineering, I was
-deeply involved in hiring and onboarding as the company scaled to roughly 750
-during my tenure.  Seeing Invitae grow from seed stage to a successful company
-with profound clinical impact was a thrill of a lifetime.
+At [Invitae](https://www.invitae.com/), I began as an unpaid scientific
+consultant and reference to venture capital firms during Invitae's Series A
+fundraising. I was among the initial team of tremendously talented and focused
+individuals who developed the laboratory methods and systems that proved the
+clinical and financial effectiveness of next generation sequencing for clinical
+genetics. We delivered reports to over six million patients and their clinicians
+before the company was acquired by LabCorp.  I was particularly involved in the
+design and implementation of our first interpretation pipeline and the design of
+our second (and long-lived) gene panel. I also contributed to overall system
+architecture and management.  I was actively involved in most of our early
+hiring within and outside engineering as the company scaled to roughly 750
+during my tenure.  It was a privilege to work with this team and see Invitae
+grow from seed stage to a successful company with profound clinical impact.
 
 As CTO at [MyOme](https://myome.com/), I translated company mission and strategy
 into actionable roadmaps.  I built the engineering team, managed the initial
@@ -57,10 +68,11 @@ clinical operations team that received our first ~50 clinical samples, hired our
 first project managers, and oversaw CLIA and HIPAA compliance efforts as our
 first privacy and security officer. I was deeply involved in the architecture
 and implementation of a system for clinical genetics test ordering, processing,
-and interpretation. I am particularly proud of the way we designed and built a
-nimble system that adapted as the company sought product-market fit while still
-providing a solid and secure foundation for high volume and CAP/CLIA/HIPAA
-compliance.
+and interpretation. I contributed to product vision and managed several partner
+relationships as the company evolved.  I am particularly proud of the team that
+we hired and the way we designed and built a nimble system that adapted as the
+company sought product-market fit while still providing a solid and secure
+foundation for high volume and CAP/CLIA/HIPAA compliance.
 
 I am the founder and executive director of
 [biocommons.org](http://biocommons.org) where I coordinate the efforts of an
@@ -76,15 +88,13 @@ internationally-recognized standard for the description of DNA, RNA, and protein
 sequence variants. I founded and chaired the Variation Representation effort at
 the [Alliance for Genomics and Health](https://ga4gh.org/) and implemented the
 first version of the [Variation Representation
-Specification](https://vrs.ga4gh.org/). I have expertise with Linux, Python,
-PostgreSQL, AWS, GCP, CI/CD, data engineering, security, and devops.
+Specification](https://vrs.ga4gh.org/).
 
-I think strategically and have a bias toward action. I am comfortable building
-scrappy solutions for quick answers and resilient systems for mission-critical
-operations. I am a practiced, thoughtful, and skeptical user of AI throughout
-product development, including brainstorming, competitive analyses, feature
-prioritization, product roadmapping, system architecture, implementation
-planning, and frontend and backend implementation.
+I have expertise with Linux, Python, PostgreSQL, AWS, GCP, CI/CD, data
+engineering, security, and devops.  I am a practiced, thoughtful, and skeptical
+user of AI throughout product development, including brainstorming, competitive
+analyses, feature prioritization, product roadmapping, system architecture,
+implementation planning, and frontend and backend implementation.
 
 ### Civic Engagement
 
@@ -109,14 +119,14 @@ Civic Engine, Congress.gov, and vote.org.
 ### Personal Life
 
 I live in San Francisco with my wife, [Hanna
-Hart](https://www.linkedin.com/in/hanna-hart/), where we raised three (now)
-adult children. I play
+Hart](https://www.linkedin.com/in/hanna-hart/), where we raised three (now
+adult) children. I play
 [ultimate](https://en.wikipedia.org/wiki/Ultimate_frisbee) regularly in pickup,
-leagues, and club teams. I  coach youth ultimate through [Ultimate
+leagues, and club teams. I have coached youth ultimate through [Ultimate
 Impact](https://www.ultimate-impact.org/) for eight years. I sail regularly on
 San Francisco Bay, including lighthearted racing through the [South Beach Yacht
 Club](https://southbeachyachtclub.org/). We enjoy traveling, scuba diving, good
-food, dinner parties, and of course our dogs. 
+food, dinner parties, and of course our dogs, Chewie and Wilbur.
 
 <div class="photo-row">
 
