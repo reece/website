@@ -5,12 +5,12 @@
         position="75% 30%" />
     </div>
 
-    <div class="grid grid-cols-2 items-center gap-4 md:gap-6 mb-4">
-      <div class="w-32 md:w-40 justify-self-end">
+    <div class="flex justify-center items-center gap-2 md:gap-6 mb-4">
+      <div class="w-24 md:w-64 shrink-0">
         <FadedImage src="/images/reece.webp" alt="Reece Hart" />
       </div>
 
-      <p class="font-display font-semibold text-secondary tracking-tight text-left justify-self-start flex flex-col gap-1 sm:gap-2 md:gap-3 text-sm sm:text-lg md:text-xl">
+      <p class="font-display font-semibold text-secondary tracking-tight text-left flex flex-col gap-1 sm:gap-2 md:gap-3 text-sm sm:text-lg md:text-2xl lg:text-3xl">
         <span>Engineering leader.</span>
         <span>Computational biologist.</span>
         <span>Civic do-gooder.</span>
@@ -19,14 +19,14 @@
 
     <p v-if="phraseItems.length" class="font-ad font-medium text-2xl mb-6">
       <PhraseCarousel :items="phraseItems" :interval-ms=4000 v-slot="{ item, mode, onDone }">
-        <span class="text-primary">{{ item?.lead_in }}</span><span
+        <span class="text-primary text-[1.2rem] md:text-[2rem]">{{ item?.lead_in }}</span><span
           class="hidden sm:inline">&nbsp;</span><br class="sm:hidden">
-        <TextTransition class="text-highlight" :text="item?.phrase ?? ''" :mode="mode"
+        <TextTransition class="text-highlight text-[1.2rem] md:text-[2rem]" :text="item?.phrase ?? ''" :mode="mode"
           @done="onDone" />
       </PhraseCarousel>
     </p>
 
-    <div v-if="page" class="relative font-body text-foreground">
+    <div v-if="page" class="relative font-body text-xl text-foreground">
       <ContentRenderer :value="page" />
     </div>
 
