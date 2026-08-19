@@ -1,31 +1,27 @@
+
+!.env.example
+!.vscode/extensions.json
+# Brainstorming companion
 # Dependencies
-node_modules/
-
-# Nuxt build / generated files
-.nuxt/
-.output/
-.data/
-
+# Editor
 # Local env files
+# Logs
+# Nuxt build / generated files
+# OS
+*.log
+.DS_Store
+.data/
 .env
 .env.*
-!.env.example
-
-# Logs
-logs
-*.log
-
-# Editor
-.vscode/
-!.vscode/extensions.json
 .idea/
-
-# OS
-.DS_Store
-Thumbs.db
-archive
-
-# Brainstorming companion
-.superpowers/
-.worktrees
+.nuxt/
+.output/
 .playwright-mcp
+.superpowers/
+.vscode/
+.worktrees
+Thumbs.db
+_archive/
+archive
+logs
+node_modules/
