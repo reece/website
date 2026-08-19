@@ -173,3 +173,26 @@ strong {
     margin: 0 0 1em 0;
   }
 }
+
+/* photo row: equal-size images, 3 columns on md+, stacked below */
+
+.photo-row {
+  margin: 1.5em 0;
+}
+.photo-row p {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1em;
+}
+.photo-row img {
+  width: 100%;
+  aspect-ratio: 3 / 2;
+  object-fit: cover;
+  border-radius: var(--image-radius);
+}
+
+@media (min-width: 768px) {
+  .photo-row p {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
