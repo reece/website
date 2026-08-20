@@ -4,7 +4,7 @@
 
     <AppHeader />
 
-    <main class="flex-1 w-full px-6 py-10">
+    <main class="flex-1 w-full px-6 pt-4 pb-10">
       <slot />
     </main>
 

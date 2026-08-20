@@ -2,32 +2,33 @@
 title: About · Reece Hart
 ---
 
-## About Me
-
-[Curriculum Vitae (PDF)](https://t.ly/reece-cv)
+# About Me
 
 I am a scientist and **product-focused engineering leader** with over two
 decades of experience architecting, building, and operating reliable software
-systems for research, healthcare, and business -- in large companies
-([IBM](https://ibm.com/), [Genentech](https://gene.com/)), zero-to-one startups
-([Invitae](https://invitae.com/), [MyOme](https://myome.com/)), and open source
-collaborations ([biocommons.org](https://biocommons.org/),
+systems for research, healthcare, and business -- in **large companies**
+([IBM](https://ibm.com/), [Genentech](https://gene.com/)), **zero-to-one
+startups** ([Invitae](https://invitae.com/), [MyOme](https://myome.com/)), and
+**open source collaborations** ([biocommons.org](https://biocommons.org/),
 [GA4GH](https://ga4gh.org/)).  I have been a **CTO**, a **founder and executive
 director** of academic/industry collaboration, and I have **primary and senior
 authorship** of international standards for representing biological sequence
 variation.  I have direct experience in **contract negotiation** and
-**partnership management**.  I am currently available for full-time employment or
-contracting in scientific software engineering or civic causes.  I thrive in
-startup environments where every day is an opportunity to create enduring value.
+**partnership management**.  I am **currently available** for full-time
+employment or contracting in scientific software engineering or civic causes.  I
+thrive in startup environments where every day is an opportunity to create
+enduring value.
 
-I have a knack for helping teams articulate mission and strategy messages
-while staying focused on incremental delivery of tangible value.  I enjoy
-collaborating with smart people to solve complex problems and leading teams
-that create products that matter.  I think strategically and have a bias
-toward action, and am comfortable building scrappy solutions for quick
-answers and resilient systems for mission-critical operations.  
+I have a knack for helping teams articulate mission and strategy messages while
+staying focused on incremental delivery of tangible value.  I enjoy
+collaborating with smart people to solve complex problems and **leading teams
+that create products that matter**.  I think strategically and have a bias
+toward
+action, and am comfortable building scrappy solutions for quick answers and
+resilient systems for mission-critical operations.  As a startup veteran, **I
+expect to build value within constrained resources**.
 
-### Education
+## Education
 
 I earned a BA in molecular biology from [UC San Diego](https://ucsd.edu/) and
 worked on early mapping of chromosome 11 for the nascent Human Genome Project at
@@ -39,59 +40,66 @@ enabled by public funding through the [National Institutes of
 Health](https://nih.gov/), [the National Science Foundation](https://nsf.gov/),
 and the [Department of Energy](https://doe.gov/), for which I am very grateful.
 
-### Professional Experience
+## Professional Experience
 
-At [Genentech](https://www.gene.com/), I started as an individual contributor
-scientist, built a small team working on protein structure prediction, and
-eventually managed computing for Research.  My research program focused on using
-protein structure prediction to identify novel therapeutic targets in the (then)
-draft human genome.  This work led to the development of Unison, the protein
-annotation system that was used by research, development, and legal teams for
-over a decade to discover and analyze protein sequences.  Unison provided
-continuously updated, indexed, and versioned feature predictions from over 60
-sources and methods across all known human and non-human proteins and it
-contributed to numerous drug target development programs.  I was promoted to
-**manage Research Computing** and became responsible for the architecture,
-budget, operations, and coordination of computing services that served ~1300
-staff in Genentech Research.  In that role, I routinely met with directors of
-computing-intensive departments to plan spending (combined capital + operational
-budget of $30-35M) and to coordinate the work of the more than 20 IT and
-application personnel.  I **negotiated significant contracts** for software and
-computing services used by Research.
+This section contains only my career highlights; see my [Curriculum Vitae
+(PDF)](https://t.ly/reece-cv) for a complete employment history.
 
-At [Invitae](https://www.invitae.com/), I began as an unpaid scientific
-consultant and reference to venture capital firms during Invitae's Series A
-fundraising.  I was among the initial team of tremendously talented and focused
-individuals who developed the laboratory methods and systems that proved the
-clinical and financial effectiveness of next generation sequencing for clinical
-genetics.  We delivered reports to over six million patients and their clinicians
-before the company was acquired by LabCorp.  I was particularly involved in the
-design and implementation of our first interpretation pipeline and the design of
-our second (and long-lived) gene panel.  I also held primary responsibility for
-our AWS cloud environment.  I was actively involved in most of our early hiring
-within and outside engineering as the company scaled to roughly 750 during my
-tenure.  It was a privilege to work with this team and see Invitae grow from
-seed stage to a successful company with profound clinical impact.
+As **CTO** at [MyOme](https://myome.com/) (2020-2025), I translated company
+mission and strategy into actionable roadmaps.  I **built the engineering
+team**, managed the initial clinical operations team that received our first ~50
+clinical samples, hired our first project managers, and oversaw compliance
+efforts as our **first privacy and security officer**.  I was the **system
+architect** of our system for clinical genetics test ordering, processing, and
+interpretation, and I implemented significant portions of early versions of it.
+I contributed to **product vision** and **managed several partner
+relationships** as the company evolved.  I am particularly proud of the team
+that we **hired while we designed and built a nimble, solid, and secure
+platform** that adapted as the company sought product-market fit while still
+providing a foundation for high volume, CAP/CLIA/HIPAA compliance, and extremely
+high marks for penetration testing and architectural reviews by third parties.
 
-As **CTO** at [MyOme](https://myome.com/), I translated company mission and
-strategy into actionable roadmaps.  I **built the engineering team**, managed
-the initial clinical operations team that received our first ~50 clinical
-samples, hired our first project managers, and oversaw compliance efforts as our
-**first privacy and security officer**.  I was the primary architect of our
-system for clinical genetics test ordering, processing, and interpretation, and
-I implemented significant portions of early versions of it.  I contributed to
-**product vision** and **managed several partner relationships** as the company
-evolved.  I am particularly proud of the team that we hired and the way we
-designed and **built a nimble, solid, and secure system** that adapted as the
-company sought product-market fit while still providing a foundation for high
-volume and CAP/CLIA/HIPAA compliance.
+At [Invitae](https://www.invitae.com/) (2010-2017), I began as an unpaid
+scientific consultant and reference to venture capital firms during Invitae's
+Series A fundraising.  I was among the initial team of tremendously talented and
+focused individuals who developed the laboratory methods and systems that proved
+the clinical and financial effectiveness of next generation sequencing for
+clinical genetics.  We delivered reports to over six million patients and their
+clinicians before the company was acquired by LabCorp.  I architected and
+**directed the implementation of our first interpretation pipeline**, and I
+designed of our second gene panel.  I also held primary responsibility for our
+AWS cloud environment.  I led the team that built our **clinical-grade system
+that enabled genome interpretation**.  I was actively involved in most of our
+early hiring within and outside engineering as the company **scaled to roughly
+750 employees** during my tenure.  It was a privilege to work with this team and
+see Invitae grow from seed stage to a successful company with profound clinical
+impact.
+
+At [Genentech](https://www.gene.com/) (2001-2009), I started as an individual
+contributor scientist, built a small team working on protein structure
+prediction, and eventually managed computing for Research.  My research program
+focused on using protein structure prediction to **discover novel therapeutic
+targets** in the (then) draft human genome.  This work led to the development of
+Unison, the protein annotation system that was used by research, development,
+and legal teams for over a decade to discover and analyze protein sequences.
+Unison **integrated and continuously updated, indexed, and tracked provenance**
+of feature predictions from over 60 sources and methods across all known human
+and non-human proteins and it contributed to numerous drug target development
+programs.  I was **promoted to manage Research Computing** and became
+responsible for the architecture, budget, operations, and coordination of
+computing services that served ~1300 staff in Genentech Research.  In that role,
+I routinely met with directors of computing-intensive departments to plan
+spending (combined capital + operational budget of $30-35M) and to coordinate
+the work of the more than 20 IT and application personnel.  I **negotiated
+significant contracts** for software and computing services used by Research.
 
 I am the **founder and executive director** of
 [biocommons.org](http://biocommons.org) where I coordinate the efforts of an
 international team of academic and industry professionals.  For over ten years,
 this community has built and maintained pre-competitive open source resources
-for genome interpretation that are trusted by multiple clinical genetics
-companies and academic researchers around the globe.
+for genome interpretation that are **trusted by clinical genetics companies and
+academic researchers around the globe**.  The biocommons steering committee
+includes representatives from academia and industry.
 
 I have joined and helped build open and academic efforts to promote standards.  I
 am the **primary author** of the most recent update to the [HGVS
@@ -109,7 +117,7 @@ user of AI throughout product development, including brainstorming, competitive
 analyses, feature prioritization, product roadmapping, system architecture,
 implementation planning, and frontend and backend implementation.
 
-### Civic Engagement
+## Civic Engagement
 
 Over the last decade, I have become increasingly determined to use my time,
 skills, and experience to improve political representation in the United
@@ -129,11 +137,13 @@ Countdown](http://nokingscountdown.org/) to motivate people leading up to No
 Kings 3 on March 28, 2026.  I am currently working on Civic Center, a personal
 passion project to help people identify their political and social values, and
 to use this awareness to increase their civic engagement in elections,
-representative relationships, and other forms of political action.  In the course
-of building these tools, I have used APIs and services from Alloy, Ballotpedia,
-Civic Engine, Congress.gov, and vote.org.
+representative relationships, and other forms of political action.  In the
+course of building these tools, I have used APIs and services from Alloy,
+[Ballotpedia](https://ballotpedia.org), [Google's Civic
+Information](https://developers.google.com/civic-information),
+[Congress.gov](https://congress.gov), and [Vote.org](https://vote.org/).
 
-### Personal Life
+## Personal Life
 
 I live in San Francisco with my wife, [Hanna
 Hart](https://www.linkedin.com/in/hanna-hart/), where we raised three (now

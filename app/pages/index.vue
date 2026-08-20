@@ -5,7 +5,7 @@
         position="75% 30%" />
     </div>
 
-    <div class="flex justify-center items-center gap-2 md:gap-6 mb-4">
+    <div class="flex justify-center items-center gap-2 md:gap-6 mb-4 p-0 md:p-12">
       <div class="w-24 md:w-64 shrink-0">
         <FadedImage src="/images/reece.webp" alt="Reece Hart" />
       </div>
