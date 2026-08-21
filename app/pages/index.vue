@@ -17,7 +17,7 @@
       </p>
     </div>
 
-    <p v-if="phraseItems.length" class="font-ad font-medium text-2xl mb-6">
+    <p v-if="phraseItems.length" class="font-ad font-medium text-2xl line-height-[1.2rem] mb-6">
       <PhraseCarousel :items="phraseItems" :interval-ms=4000 v-slot="{ item, mode, onDone }">
         <span class="text-primary text-[1.2rem] md:text-[2rem]">{{ item?.lead_in }}</span><span
           class="hidden sm:inline">&nbsp;</span><br class="sm:hidden">
