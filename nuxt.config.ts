@@ -49,7 +49,7 @@ export default defineNuxtConfig({
 
   seo: {
     meta: {
-      ogImage: 'https://reecehart.com/images/reece.webp',
+      ogImage: 'https://reecehart.com/images/oglogo.webp',
     },
   },
 
