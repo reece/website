@@ -25,7 +25,15 @@ export default defineNuxtConfig({
 
   app: {
     head: {
-      link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }],
+      link: [
+        { rel: 'icon', type: 'image/svg+xml', href: '/favicon.svg' },
+        { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico', sizes: 'any' },
+        { rel: 'manifest', href: '/site.webmanifest' },
+      ],
+      meta: [
+        { name: 'theme-color', content: '#FAF8F5', media: '(prefers-color-scheme: light)' },
+        { name: 'theme-color', content: '#0A0A0A', media: '(prefers-color-scheme: dark)' },
+      ],
       // Every page already composes its own full title (e.g. "Writing · Reece Hart"),
       // so skip the module's default "%s | site.name" template to avoid doubling it.
       titleTemplate: '%s',
@@ -43,13 +51,21 @@ export default defineNuxtConfig({
 
   site: {
     url: 'https://reecehart.com',
-    name: 'Reece Hart',
-    description: 'Engineering leader. Computational biologist. Civic do-gooder.',
+    name: 'Reece Hart • Engineering Leader & Computational Biologist',
+    description: 'Startup veteran and engineering leader in healthcare and civic causes',
   },
 
   seo: {
     meta: {
-      ogImage: 'https://reecehart.com/images/oglogo.webp',
+      ogImage: 'https://reecehart.com/images/ogimage.webp',
+      ogImageAlt: 'Watercolor illustration of the Golden Gate Bridge and San Francisco skyline with Reece Hart, PhD branding.',
+      ogImageType: 'image/webp',
+      ogImageWidth: 1730,
+      ogImageHeight: 909,
+      ogLocale: 'en_US',
+      twitterCard: 'summary_large_image',
+      twitterImage: 'https://reecehart.com/images/ogimage.webp',
+      twitterImageAlt: 'Watercolor illustration of the Golden Gate Bridge and San Francisco skyline with Reece Hart, PhD branding.',
     },
   },
 

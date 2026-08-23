@@ -1,5 +1,7 @@
 <template>
   <div class="relative font-body text-foreground">
+    <h1 class="sr-only">Reece Hart, PhD — Engineering Leader and Computational Biologist</h1>
+
     <div class="fixed inset-0 z-0 pointer-events-none opacity-[0.15] dark:opacity-[0.08]">
       <FadedImage src="/images/sf-from-marin.webp" alt="San Francisco Bay seen from Marin"
         position="75% 30%" />
