@@ -13,10 +13,10 @@
   },
   "dependencies": {
     "@nuxt/content": "^3",
-    "@nuxt/fonts": "^0.14.0",
+    "@nuxt/fonts": "^1.0.1",
     "@nuxt/image": "^2.1.0",
     "@nuxtjs/color-mode": "^4.0.1",
-    "@nuxtjs/seo": "^5.3.16",
+    "@nuxtjs/seo": "^6.0.1",
     "nuxt": "^4"
   },
   "devDependencies": {
